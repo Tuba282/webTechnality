@@ -1,9 +1,12 @@
 import React from 'react'
+import Home from '@/screens/Home/Home.jsx'
 
-const Home = () => {
+const Main = () => {
   return (
-    <div>Home</div>
+    <div>
+      <Home/>
+    </div>
   )
 }
 
-export default Home
+export default Main
