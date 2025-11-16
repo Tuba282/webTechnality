@@ -9,7 +9,16 @@ const Hero = () => {
     <section className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden bg-gradient-to-br from-gray-50 to-gray-200 px-4 text-center">
       {/* ---- Floating Boxes ---- */}
 
-
+      <motion.p
+        initial={{ opacity: 0, }}
+        animate={{ opacity: 1, }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="flex justify-between gap-2 items-center py-2.5 px-3 bg-white rounded-3xl ">
+        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24">
+          <path fill="#0CAD00" d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2" />
+        </svg>
+        Avaible to work
+      </motion.p>
 
 
       {/* ---- Main Text ---- */}
@@ -20,7 +29,7 @@ const Hero = () => {
           transition={{ delay: 1.2, duration: 0.6 }}
           delay={1.2}
           text="Brands"
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-[Mulish] font-semibold text-black mb:10 sm:mb-10"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl  font-sans  font-semibold text-black "
         />
 
         <motion.div
@@ -56,13 +65,13 @@ const Hero = () => {
           {/* <HeroMarquee/> */}
           <marquee className="" behavior="smooth" direction="left">
             <div className="flex! items-center gap-x-20">
-              
+
               <span className="flex! items-center text-[#848484] text-xl sm:text-4xl font-light"><img src="./framer.png" alt="" className="w-8 h-8 object-cover!" /> Framer Motion</span>
               <span className="flex! items-center text-[#848484] text-xl sm:text-4xl font-light"><img src="./webflow-icon.png" alt="" className="w-8 h-8 object-cover!" />Webflow</span>
               <span className="flex! items-center text-[#848484] text-xl sm:text-4xl font-light"><img src="./contra.png" alt="" className="w-8 h-8 object-cover!" />Contra</span>
               <span className="flex! items-center text-[#848484] text-xl sm:text-4xl font-light">Jitter</span>
             </div>
-            </marquee>
+          </marquee>
         </motion.div>
         <AnimatedLetters
           initial={{ opacity: 0, y: -40 }}
@@ -77,32 +86,20 @@ const Hero = () => {
 
 
 
+      <motion.p
+        initial={{ opacity: 0, y: 0 }}
+        animate={{ opacity: 1, y: 40 }}
+        transition={{ duration: 0.9 }}
+        delay={2.2}
+        className="sm:w-[400] text-sm sm:text-base md:text-lg text-gray-600 leading-tight tracking-wide font-light max-w-xl mt-6"
+      >
+        We dont just make brands pretty — we craft smart design that fuels real business growth.
+      </motion.p>
+
+
+
     </section>
   );
 };
 
 export default Hero;
-
-
-/*
-
-      <motion.p
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2.6, duration: 0.6 }}
-        className="mt-6 max-w-xl text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed"
-      >
-        We don’t just make brands pretty — we craft smart design that fuels real
-        business growth.
-      </motion.p>
-
-      <motion.button
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 3.2, duration: 0.5 }}
-        className="mt-8 px-6 sm:px-8 py-3 bg-black text-white text-sm sm:text-base rounded-full shadow-lg flex items-center gap-2 hover:bg-gray-800 transition-all"
-      >
-        <span>Book a Meeting</span>
-        <span className="text-lg sm:text-xl">→</span>
-      </motion.button>
-*/ 
