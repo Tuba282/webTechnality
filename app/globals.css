@@ -2,6 +2,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+::selection {
+  background-color: black !important;
+  color: white !important;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

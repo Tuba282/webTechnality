@@ -3,10 +3,12 @@ import { motion } from "framer-motion";
 import React from "react";
 import { AnimatedLetters } from "./SplitTextGSAP";
 import HeroSwiper from "./HeroSwiper";
+import { FaCircle } from "react-icons/fa";
+import { GoArrowRight } from "react-icons/go";
 
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden bg-gradient-to-br from-gray-50 to-gray-200 px-4 text-center">
+    <section className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden px-4 text-center">
       {/* ---- Floating Boxes ---- */}
 
       <motion.p
@@ -14,9 +16,8 @@ const Hero = () => {
         animate={{ opacity: 1, }}
         transition={{ duration: 1, ease: "easeOut" }}
         className="flex justify-between gap-2 items-center py-2.5 px-3 bg-white rounded-3xl ">
-        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24">
-          <path fill="#0CAD00" d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2" />
-        </svg>
+
+        <FaCircle className="text-[#0CAD00]" size={8} />
         Avaible to work
       </motion.p>
 
@@ -95,7 +96,20 @@ const Hero = () => {
       >
         We dont just make brands pretty — we craft smart design that fuels real business growth.
       </motion.p>
-
+      <motion.p
+        initial={{ opacity: 0, y: 0 }}
+        animate={{ opacity: 1, y: 40 }}
+        transition={{ duration: 0.9 }}
+        delay={2.2}
+        
+        className="relative cursor-pointer opacity-90 hover:opacity-100 transition-opacity active:scale-95 bg-[#E7E7E7] shadow-xs shadow-black/30 mt-6 p-2.5 rounded-full"
+      >
+        <p className="flex justify-between gap-3 items-center py-2 px-4 rounded-full shadow text-white bg-black">
+          <img src="/favicon.ico" alt="logo" className="w-10 h-10 drop-shadow-xs drop-shadow-white p-0.5" />
+          Book a Meeting
+          <GoArrowRight className="font-light" size={20} />
+        </p>
+      </motion.p>
 
 
     </section>
