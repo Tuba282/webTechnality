@@ -44,16 +44,16 @@ export function HeroMarquee() {
     ];
     return (
         <div
-            className="relative mx-auto my-10 flex w-full max-w-7xl min-h-[400px] px-1 max-h-screen flex-col items-center bg-amber-600 justify-center overflow-hidden rounded-4xl">
+            className="relative mx-auto my-10 flex w-full max-w-7xl min-h-[400px] px-1 h-screen flex-col items-center bg-black justify-center overflow-hidden rounded-4xl">
 
-            <div className="z-20 bg-amber-600 flex flex-col justify-center items-center">
+            <div className="z-20 flex flex-col justify-center items-center">
                 <motion.p
                     initial={{ opacity: 0, rotate: 12 }}
                     animate={{ opacity: 1, rotate: -12 }}
                     transition={{ duration: 1, ease: "easeOut" }}
                     style={{ clipPath: `100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%` }}
                     className="relative mb-5 drop-shadow-sm flex justify-between gap-2 md:font-semibold items-center p-2 px-4 md:py-2.5 md:px-4 bg-black text-white rounded-full ">
-                    Avaible to work
+                    See Recent Work
                     <span className="bg-black top-6.5 md:top-7.5 left-[25%] z-10 absolute h-6 w-6" style={{ clipPath: `polygon(100% 50%, 50% 100%, 0 50%)` }}></span>
                 </motion.p>
                 <button
@@ -65,7 +65,7 @@ export function HeroMarquee() {
             {/* <div
                 className="absolute inset-0 z-10 h-full w-full bg-black/30 dark:bg-black/40" /> */}
             <ThreeDMarquee
-                className="pointer-events-none border-black border-8 md:border-15 absolute inset-0 h-full w-full"
+                className="pointer-events-none absolute inset-0 h-full w-full"
                 images={images} />
         </div>
     );

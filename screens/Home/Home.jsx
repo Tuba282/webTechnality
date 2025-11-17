@@ -1,3 +1,4 @@
+import Brand from '@/components/Brand';
 import Hero from '@/components/Hero'
 import { HeroMarquee } from '@/components/ScrollMarquee';
 import { ThreeDMarquee } from '@/components/ui/3d-marquee';
@@ -39,7 +40,7 @@ const Home = () => {
     "https://assets.aceternity.com/world-map.webp",
   ];
   return (
-    <div className=' bg-gradient-to-br from-gray-50 to-gray-200'>
+    <div className=''>
       <Hero />
       {/* <ContainerScroll>
         <video
@@ -52,6 +53,7 @@ const Home = () => {
 
       </ContainerScroll> */}
       <HeroMarquee/>
+      <Brand/>
       </div>
   )
 }
