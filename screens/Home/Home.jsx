@@ -52,8 +52,7 @@ const Home = () => {
 
       </ContainerScroll> */}
       <HeroMarquee/>
-          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    </div>
+      </div>
   )
 }
 
