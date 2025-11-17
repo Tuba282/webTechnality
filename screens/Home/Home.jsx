@@ -1,8 +1,6 @@
 import Brand from '@/components/Brand';
 import Hero from '@/components/Hero'
 import { HeroMarquee } from '@/components/ScrollMarquee';
-import { ThreeDMarquee } from '@/components/ui/3d-marquee';
-import { ContainerScroll } from '@/components/ui/container-scroll-animation'
 import React from 'react'
 
 const Home = () => {
@@ -40,7 +38,7 @@ const Home = () => {
     "https://assets.aceternity.com/world-map.webp",
   ];
   return (
-    <div className=''>
+    <div>
       <Hero />
       {/* <ContainerScroll>
         <video
@@ -52,9 +50,9 @@ const Home = () => {
           />
 
       </ContainerScroll> */}
-      <HeroMarquee/>
-      <Brand/>
-      </div>
+      <HeroMarquee />
+      <Brand />
+    </div>
   )
 }
 
