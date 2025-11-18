@@ -136,7 +136,7 @@ export default function PricingCard() {
                                 transition={{ duration: 1, delay: 0.5 }}
                                 className="flex items-center gap-4 mt-2 bg-black text-white px-2 py-2 rounded-full shadow-lg hover:opacity-100 active:scale-95 transition-opacity duration-300"
                             >
-                                <img src="/favicon.png" alt="Logo" className="w-8 h-8 sm:w-10 sm:h-10 drop-shadow-md p-1" />
+                                <img src="/favicon.png" alt="Logo" className="w-8 h-8 sm:w-10 drop-shadow-xs drop-shadow-white sm:h-10 drop-shadow-md p-1" />
                                 Book a Meeting
                                 <GoArrowRight size={22} />
                             </motion.button>
@@ -197,7 +197,7 @@ export default function PricingCard() {
                             {/* Author */}
                             <div className="flex items-center gap-3 p-1 mt-10">
                                 <div className="w-10 h-10 rounded-full bg-black/10 text-white flex items-center justify-center text-sm font-bold">
-                                    <img src="/favicon.png" alt="Logo" className="w-8 h-8 sm:w-10 sm:h-10 drop-shadow-md p-1" />
+                                    <img src="/favicon.png" alt="Logo" className="w-8 h-8 sm:w-10 drop-shadow-xs drop-shadow-black sm:h-10 drop-shadow-md p-1" />
                                 </div>
                                 <div className="flex flex-col text-sm">
                                     <span className="font-semibold text-gray-900">David Krzemien</span>

@@ -54,11 +54,11 @@ export const Faq = () => {
                 className="max-w-[90%] mx-auto sm:max-w-[70%] text-center lg:py-20 py-10"
             >
                 <div className="flex items-center justify-center gap-5 my-6">
-                    <div className="h-[1px] w-16 sm:w-28 bg-[#898989] opacity-40"></div>
-                    <span className="lg:text-[16px] italic tracking-wider text-[#8e8e8e]" style={{ wordSpacing: "3px" }}>
-                        FAQ
+                    <div className="h-px w-16 bg-[#898989] opacity-40"></div>
+                    <span className="text-gray-500 text-2xl font-[Charm-Regular] italic tracking-wide" style={{ wordSpacing: "3px" }}>
+                        FAQs
                     </span>
-                    <div className="h-[1px] w-16 sm:w-28 bg-[#898989] opacity-40"></div>
+                    <div className="h-px w-16 bg-[#898989] opacity-40"></div>
                 </div>
                 <h4 className="lg:text-[37px] text-2xl text-center sm:text-6xl leading-tight">
                     Your Questions, Answered
@@ -83,7 +83,7 @@ export const Faq = () => {
                                     <img
                                         src="https://framerusercontent.com/images/tdMAAOQgGX3QdjxUBBKpxISknGU.png?scale-down-to=512&width=1024&height=1024"
                                         alt="Logo"
-                                        className="lg:w-15 lg:h-15 w-9 h-9 sm:w-10 sm:h-10 rounded-full drop-shadow-md"
+                                        className="lg:w-15 drop-shadow-xs drop-shadow-gray lg:h-15 w-9 h-9 sm:w-10 sm:h-10 rounded-full"
                                     />
                                 </div>
                                 <div className="flex flex-col text-sm">
@@ -100,7 +100,7 @@ export const Faq = () => {
                                 className="bg-white rounded-full overflow-hidden"
                             >
                                 <button className="lg:w-[300px] justify-center w-full flex items-center gap-4 m-1 bg-black text-white px-2 py-2 rounded-full shadow-lg hover:opacity-100 active:scale-95 transition-opacity duration-300">
-                                    <img src="/favicon.png" alt="Logo" className="w-8 h-8 sm:w-10 sm:h-10 drop-shadow-md p-1" />
+                                    <img src="/favicon.png" alt="Logo" className="drop-shadow-sm drop-shadow-white w-8 h-8 sm:w-10 sm:h-10 drop-shadow-md p-1" />
                                     Book a Meeting
                                     <GoArrowRight size={22} />
                                 </button>
@@ -145,7 +145,7 @@ export const Faq = () => {
                                             transition={{ duration: 0.3 }}
                                             className="text-[#9f9f9f]"
                                         >
-                                            <FiPlus size={20}  />
+                                            <FiPlus size={20} />
                                         </motion.div>
                                     </button>
                                     <AnimatePresence>

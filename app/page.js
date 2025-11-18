@@ -1,5 +1,5 @@
 import React from 'react'
-import Home from '@/screens/Home/Home.jsx'
+import Home from '@/app/home/Home.jsx'
 
 const Main = () => {
   return (
