@@ -19,7 +19,7 @@ const Hero = () => {
         initial={{ opacity: 0, }}
         animate={{ opacity: 1, }}
         transition={{ duration: 1, ease: "easeOut" }}
-          className=" flex justify-between gap-2 items-center py-2.5 px-3 bg-white rounded-3xl ">
+          className="cursor-target flex justify-between gap-2 items-center py-2.5 px-3 bg-white rounded-3xl ">
 
         <FaCircle   className=" text-[#0CAD00]" size={8} />
         Avaible to work
@@ -41,7 +41,7 @@ const Hero = () => {
           initial={{ scale: 0, opacity: 0, y: -50 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-            className=" -rotate-6 border-3 border-black bg-white/90 w-24 h-16 sm:w-32 sm:h-24 rounded-3xl md:rounded-4xl shadow-black shadow-md flex items-center justify-center mb:10 sm:mb-10"
+            className="cursor-target -rotate-6 border-3 border-black bg-white/90 w-24 h-16 sm:w-32 sm:h-24 rounded-3xl md:rounded-4xl shadow-black shadow-md flex items-center justify-center mb:10 sm:mb-10"
         >
           <HeroSwiper />
         </motion.div>
@@ -65,7 +65,7 @@ const Hero = () => {
           initial={{ scale: 0, opacity: 0, y: 50 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
-            className=" rotate-6 border-3 border-black bg-[#262626] overflow-hidden w-24 h-16 sm:w-32 sm:h-24 rounded-3xl md:rounded-4xl shadow-black shadow-md flex items-center justify-center"
+            className="cursor-target rotate-6 border-3 border-black bg-[#262626] overflow-hidden w-24 h-16 sm:w-32 sm:h-24 rounded-3xl md:rounded-4xl shadow-black shadow-md flex items-center justify-center"
         >
           {/* <HeroMarquee/> */}
           <marquee   className=" " behavior="smooth" direction="left">

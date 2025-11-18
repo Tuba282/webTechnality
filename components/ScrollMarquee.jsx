@@ -59,7 +59,7 @@ export function HeroMarquee() {
                         <span   className=" bg-black top-6.5 md:top-7.5 left-[25%] z-10 absolute h-6 w-6" style={{ clipPath: `polygon(100% 50%, 50% 100%, 0 50%)` }}></span>
                     </motion.p>
                     <button
-                          className=" w-15 h-15 md:w-30 md:h-30 flex justify-center items-center rounded-full  backdrop-blur-xs bg-black/10 border border-white/20  px-6 py-2.5 text-sm font-medium text-white  transition-colors hover:bg-black/20 focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-black focus:outline-none">
+                          className="cursor-target w-15 h-15 md:w-30 md:h-30 flex justify-center items-center rounded-full  backdrop-blur-xs bg-black/10 border border-white/20  px-6 py-2.5 text-sm font-medium text-white  transition-colors hover:bg-black/20 focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-black focus:outline-none">
                         <BsFolderFill   className=" text-white drop-shadow-sm text-3xl" />
                     </button>
                 </Link>

@@ -41,7 +41,7 @@ const Brand = () => {
                     viewport={{ once: true, margin: "-100px" }}
                       className=" px-2 py-2 rounded-full rotate-6 backdrop-blur-xs bg-black/10 border border-white/10 "
                 >
-                    <div   className=" ps-1 pe-3 py-1 flex items-center gap-2 bg-white shadow-md  rounded-full">
+                    <div   className="cursor-target ps-1 pe-3 py-1 flex items-center gap-2 bg-white shadow-md  rounded-full">
                         <span   className="  bg-orange-500 p-1 rounded-full"> <MdWindow className='text-white text-md' /></span>
                         <p   className=" font-medium">Design systems</p>
                     </div>
@@ -54,7 +54,7 @@ const Brand = () => {
                     viewport={{ once: true, margin: "-100px" }}
                       className=" px-2 py-2 w-[150px] -rotate-3 rounded-full backdrop-blur-xs bg-black/10 border border-white/10 "
                 >
-                    <div   className=" ps-1 pe-3 py-1 flex items-center gap-2 bg-white shadow-md  rounded-full">
+                    <div   className="cursor-target ps-1 pe-3 py-1 flex items-center gap-2 bg-white shadow-md  rounded-full">
                         <span   className="  bg-[#464646] p-1 rounded-full"> <BiWindows className='text-white text-md' /></span>
                         <p   className=" font-medium">UX Design</p>
                     </div>
@@ -67,7 +67,7 @@ const Brand = () => {
                     viewport={{ once: true, margin: "-100px" }}
                       className=" px-2 py-2 w-[130px] -rotate-6 rounded-full backdrop-blur-xs bg-black/10 border border-white/10 "
                 >
-                    <div   className=" ps-1 pe-3 py-1 flex items-center gap-2 bg-white shadow-md  rounded-full">
+                    <div   className="cursor-target ps-1 pe-3 py-1 flex items-center gap-2 bg-white shadow-md  rounded-full">
                         <span   className="  bg-[#05A9FF] p-1 rounded-full"> <IoSearch className='text-white text-md' /></span>
                         <p   className=" font-medium">Research</p>
                     </div>
@@ -106,7 +106,7 @@ const Brand = () => {
                     viewport={{ once: true, margin: "-100px" }}
                       className=" px-2 py-2 rounded-full -rotate-6 backdrop-blur-xs bg-black/10 border border-white/10 "
                 >
-                    <div   className=" ps-1 pe-3 py-1 flex items-center gap-2 bg-white shadow-md  rounded-full">
+                    <div   className="cursor-target ps-1 pe-3 py-1 flex items-center gap-2 bg-white shadow-md  rounded-full">
                         <span   className="  bg-orange-500 p-1 rounded-full"> <MdOutlineAnimation className='text-white text-md' /></span>
                         <p   className=" font-medium">Animation </p>
                     </div>
@@ -119,7 +119,7 @@ const Brand = () => {
                     viewport={{ once: true, margin: "-100px" }}
                       className=" px-2 py-2 w-[150px] rotate-3 rounded-full backdrop-blur-xs bg-black/10 border border-white/10 "
                 >
-                    <div   className=" ps-1 pe-3 py-1 flex items-center gap-2 bg-white shadow-md  rounded-full">
+                    <div   className="cursor-target ps-1 pe-3 py-1 flex items-center gap-2 bg-white shadow-md  rounded-full">
                         <span   className="  bg-[#464646] p-1 rounded-full"> <TbBrandArc className='text-white text-md' /></span>
                         <p   className=" font-medium">Branding</p>
                     </div>
@@ -132,7 +132,7 @@ const Brand = () => {
                     viewport={{ once: true, margin: "-100px" }}
                       className=" px-2 py-2 w-[130px] rotate-6 rounded-full backdrop-blur-xs bg-black/10 border border-white/10 "
                 >
-                    <div   className=" ps-1 pe-3 py-1 flex items-center gap-2 bg-white shadow-md  rounded-full">
+                    <div   className="cursor-target ps-1 pe-3 py-1 flex items-center gap-2 bg-white shadow-md  rounded-full">
                         <span   className="  bg-[#05A9FF] p-1 rounded-full"> <TbBrandCtemplar className='text-white text-md' /></span>
                         <p   className=" font-medium">Stratergy</p>
                     </div>

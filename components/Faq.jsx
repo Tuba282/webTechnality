@@ -44,7 +44,7 @@ export const Faq = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className="w-full mx-auto bg-[#D3D3D3]"
+            className="w-full mx-auto"
         >
             {/* Header */}
             <motion.div
@@ -61,8 +61,8 @@ export const Faq = () => {
                     <div className="h-px w-12 sm:w-16 bg-[#898989] opacity-40"></div>
                 </div>
 
-                <h4 className="font-light lg:text-6xl  text-4xl sm:text-3xl text-center ">
-                    Your Questions, <span className="text-gray-400">Answered</span>
+                 <h4 className="font-light lg:text-6xl  text-4xl sm:text-3xl text-center ">
+                   Your Questions, <span className="text-gray-400">Answered</span>
                 </h4>
             </motion.div>
 
@@ -99,7 +99,7 @@ export const Faq = () => {
                                 transition={{ duration: 1, delay: 0.5 }}
                                 className=" bg-white rounded-full overflow-hidden"
                             >
-                                <button className="w-full flex items-center justify-center gap-3 bg-black text-white px-4 py-3 rounded-full shadow-lg active:scale-95 transition">
+                                <button className="cursor-target w-full flex items-center justify-center gap-3 bg-black text-white px-4 py-3 rounded-full shadow-lg active:scale-95 transition">
                                     <img
                                         src="/favicon.png"
                                         alt="Logo"

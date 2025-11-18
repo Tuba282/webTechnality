@@ -12,31 +12,15 @@ import FounderSection from '@/components/FounderSection';
 import TargetCursor from '@/components/ui/TargetCursor';
 
 const Home = () => {
-
   return (
     <div className='bg-[#D3D3D3]'>
-      <TargetCursor
-        spinDuration={2}
-        hideDefaultCursor={true}
-        parallaxOn={true}
-      />
+      <TargetCursor  spinDuration={2}  hideDefaultCursor={true}  parallaxOn={true} />
       <Hero />
-      {/* <ContainerScroll>
-        <video
-            src=""
-            autoPlay
-            muted
-            loop
-              className=" w-full h-full object-cover"
-          />
-
-      </ContainerScroll> */}
-
       <HeroMarquee />
       <Brand />
-      <OurProcess/>
-      <Services/>
-      <FounderSection/>
+      <OurProcess />
+      <Services />
+      <FounderSection />
       <PricingCard />
       <FeatureGrid />
       <Faq />
