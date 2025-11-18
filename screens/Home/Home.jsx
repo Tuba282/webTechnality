@@ -1,4 +1,5 @@
 import Brand from '@/components/Brand';
+import DiagonalScroller from '@/components/DiagonalScroller';
 import Hero from '@/components/Hero'
 import { HeroMarquee } from '@/components/ScrollMarquee';
 import React from 'react'
@@ -52,6 +53,8 @@ const Home = () => {
       </ContainerScroll> */}
       <HeroMarquee />
       <Brand />
+      <DiagonalScroller/>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </div>
   )
 }
