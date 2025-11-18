@@ -7,6 +7,7 @@ import React from 'react'
 import PricingCard from '@/components/PricingCard';
 import FeatureGrid from '@/components/FeatureGrid';
 import { Faq } from '@/components/Faq';
+import Services from '@/screens/Services/Services';
 
 const Home = () => {
   const images = [
@@ -58,6 +59,7 @@ const Home = () => {
       
       <HeroMarquee />
       <Brand />
+      <Services/>
       <PricingCard />
       <FeatureGrid />
       <Faq />
