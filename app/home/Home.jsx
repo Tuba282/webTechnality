@@ -8,6 +8,8 @@ import PricingCard from '@/components/PricingCard';
 import FeatureGrid from '@/components/FeatureGrid';
 import { Faq } from '@/components/Faq';
 import Services from '@/screens/Services/Services';
+import TargetCursor from '@/components/ui/TargetCursor';
+import ProjectsSection from '@/components/ProjectsSection';
 
 const Home = () => {
   const images = [
@@ -45,6 +47,11 @@ const Home = () => {
   ];
   return (
     <div className='bg-[#D3D3D3]'>
+      <TargetCursor
+        spinDuration={2}
+        hideDefaultCursor={true}
+        parallaxOn={true}
+      />
       <Hero />
       {/* <ContainerScroll>
         <video
@@ -52,14 +59,15 @@ const Home = () => {
             autoPlay
             muted
             loop
-            className="w-full h-full object-cover"
+              className=" w-full h-full object-cover"
           />
 
       </ContainerScroll> */}
-      
+
       <HeroMarquee />
       <Brand />
-      <Services/>
+      <Services />
+      <ProjectsSection/>
       <PricingCard />
       <FeatureGrid />
       <Faq />

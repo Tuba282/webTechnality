@@ -66,35 +66,35 @@ export default function Services() {
   const [active, setActive] = useState("design");
 
   return (
-    <section className="lg:px-30 px-5 sm:px-10 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section  className=" lg:px-30 px-5 sm:px-10 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-      <div className="flex flex-col">
-        <div className="max-w-[90%] mx-auto sm:max-w-[70%] text-center ">
-          <div className="flex items-center justify-center gap-5 my-6">
-            <div className="h-px w-16 bg-[#898989] opacity-40"></div>
-            <span className="text-gray-500 text-2xl font-[Charm-Regular] italic tracking-wide" style={{ wordSpacing: "3px" }}>
+      <div  className=" flex flex-col">
+        <div  className="max-w-[90%] mx-auto sm:max-w-[70%] text-center ">
+          <div  className="flex items-center justify-center gap-5 my-6">
+            <div   className=" h-px w-16 bg-[#898989] opacity-40"></div>
+            <span   className=" text-gray-500 text-2xl font-[Charm-Regular] italic tracking-wide" style={{ wordSpacing: "3px" }}>
               Digit Experince
             </span>
-            <div className="h-px w-16 bg-[#898989] opacity-40"></div>
+            <div   className=" h-px w-16 bg-[#898989] opacity-40"></div>
           </div>
-          <h2 className="font-light lg:text-6xl  text-4xl sm:text-3xl text-center mb-6">
-            Our <span className="text-gray-500">Services.</span>
+          <h2   className=" font-light lg:text-6xl  text-4xl sm:text-3xl text-center mb-6">
+            Our <span   className=" text-gray-500">Services.</span>
           </h2>
           <BlurText
             text="As a leading web development company, we provide end-to-end services—from custom web design and e-commerce solutions to mobile app development and tailored digital marketing strategies—to elevate your online business to the next level."
             delay={50}
             animateBy="words"
             direction="bottom"
-            className="text-center! font-[Mulish] font-light"
+              className=" text-center! font-[Mulish] font-light"
           />
 
         </div>
-        <div className="">
+        <div   className=" ">
           {/* Heading */}
 
           <img
             src="/wheel.png"
-            className="lg:w-[300px] lg:h-[300px] w-full h-auto mx-auto"
+              className=" lg:w-[300px] lg:h-[300px] w-full h-auto mx-auto"
             alt="Service Illustration"
           />
         </div>
@@ -108,31 +108,31 @@ export default function Services() {
 
 
         {/* Buttons */}
-        <div className="flex gap-3 mb-10 flex-wrap justify-center lg:justify-start">
+        <div  className="flex gap-3 mb-10 flex-wrap justify-center lg:justify-start">
           <Button
             active={active === "design"}
             onClick={() => setActive("design")}
-            icon={<RiPenNibFill className="font-light" />}
+            icon={<RiPenNibFill   className=" font-light" />}
             label="Design"
           />
 
           <Button
             active={active === "development"}
             onClick={() => setActive("development")}
-            icon={<RiCodeAiLine className="font-light" />}
+            icon={<RiCodeAiLine   className=" font-light" />}
             label="Development"
           />
 
           <Button
             active={active === "mobile"}
             onClick={() => setActive("mobile")}
-            icon={<FaMobileAlt className="font-light" />}
+            icon={<FaMobileAlt   className=" font-light" />}
             label="Mobile App"
           />
         </div>
 
         {/* LIST WITH IMAGE HOVER EFFECT */}
-        <div className="border-t">
+        <div  className="border-t">
           {serviceData[active].map((item, i) => (
             <HoverRow key={i} heading={item.title} imgSrc={item.img} />
           ))}
@@ -200,12 +200,12 @@ const HoverRow = ({ heading, imgSrc }) => {
       onMouseMove={handleMouseMove}
       initial="initial"
       whileHover="whileHover"
-      className="group relative flex items-center justify-between 
+       className=" group relative flex items-center justify-between 
       border-b py-6 cursor-pointer"
     >
       {/* HEADING */}
       <motion.h3
-        className="font-light text-xl sm:text-2xl  lg:text-3xl group-hover:text-gray-500 transition"
+          className=" font-light text-xl sm:text-2xl  lg:text-3xl group-hover:text-gray-500 transition"
         variants={{
           initial: { x: 0 },
           whileHover: { x: -16 },
@@ -229,7 +229,7 @@ const HoverRow = ({ heading, imgSrc }) => {
         }}
         transition={{ type: "spring" }}
         src={imgSrc}
-        className="absolute z-0 h-24 w-32 md:h-48 md:w-64 rounded-xl object-cover pointer-events-none"
+          className=" absolute z-0 h-24 w-32 md:h-48 md:w-64 rounded-xl object-cover pointer-events-none"
       />
 
       {/* ARROW */}
@@ -240,7 +240,7 @@ const HoverRow = ({ heading, imgSrc }) => {
         }}
         transition={{ type: "spring" }}
       >
-        <FiArrowRight className="text-3xl text-gray-700 group-hover:text-gray-500" />
+        <FiArrowRight   className=" text-3xl text-gray-700 group-hover:text-gray-500" />
       </motion.div>
     </motion.div>
   );

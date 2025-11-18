@@ -13,7 +13,7 @@ import Image from "next/image";
 
 const HeroSwiper = () => {
   return (
-    <div className="overflow-hidden! p-0!">
+    <div   className=" overflow-hidden! p-0!">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -25,7 +25,7 @@ const HeroSwiper = () => {
           disableOnInteraction: false,
         }}
         modules={[EffectFade,Autoplay,]}
-        className="mySwiper p-0!"
+          className=" mySwiper p-0!"
       >
         {[
           "https://framerusercontent.com/images/hSwT5bZsymf6RUhRvIEtNbSbEo.png?width=3000&height=1962",
@@ -35,10 +35,10 @@ const HeroSwiper = () => {
         ].map((item, index) => (
           <SwiperSlide
             key={index}
-            className="flex items-center justify-center p-0!"
+              className=" flex items-center justify-center p-0!"
           >
             
-            <Image width={100} height={100} src={item} className="w-full! h-full! object-cover! rounded-4xl" alt="" />
+            <Image width={100} height={100} src={item}   className=" w-full! h-full! object-cover! rounded-4xl" alt="" />
           </SwiperSlide>
         ))}
       </Swiper>
