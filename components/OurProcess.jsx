@@ -92,7 +92,7 @@ export default function OurProcess() {
                     </div>
 
                     <h2 className="font-light lg:text-6xl text-4xl sm:text-3xl">
-                        Here’s how it works
+                        Here’s how it <span className="text-gray-400">Works</span>
                     </h2>
                 </motion.div>
 
@@ -148,7 +148,7 @@ export default function OurProcess() {
                         <div className="flex flex-row lg:w-[80%] w-[85%]  gap-6">
                             
                            <BlurText
-                                text=" Working with Denqid was unbelivable. He instantly understood our vision and translated it into a sleek, intuitive Website. The process felt effortless, and the results exceeded our expectations."
+                                text=" Working with Webtechnality was unbelivable. He instantly understood our vision and translated it into a sleek, intuitive Website. The process felt effortless, and the results exceeded our expectations."
                                 delay={100}
                                 animateBy="words"
                                 direction="bottom"

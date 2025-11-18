@@ -201,7 +201,7 @@ const HoverRow = ({ heading, imgSrc }) => {
       initial="initial"
       whileHover="whileHover"
        className=" group relative flex items-center justify-between 
-      border-b py-6 cursor-pointer"
+      border-b py-10 cursor-pointer"
     >
       {/* HEADING */}
       <motion.h3

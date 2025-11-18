@@ -48,13 +48,8 @@ export default function PricingCard() {
 
     return (
 
-<<<<<<< HEAD
-        <div  className="relative p-2">
-        <Diagonal2D className={`z-0`} />
-=======
         <div className="relative p-2">
             <Diagonal2D className={`z-0`} />
->>>>>>> 4c7d0144682bc803d6e08278e6b0d82565b73bb1
             <div>
                 {/* Hero Text */}
                 <div  className="max-w-[90%] mx-auto sm:max-w-[70%] text-center ">
@@ -70,15 +65,9 @@ export default function PricingCard() {
                     <span className="text-gray-400"> Fixed </span> Price, <span className="text-gray-400"> Zero</span>  Limits
                 </h4>
             </div>
-<<<<<<< HEAD
-            <div  className="max-w-6xl mt-16 mx-auto z-20 relative bg-gray-100 rounded-3xl shadow-xl p-2">
-
-                <div  className="max-w-6xl pt-15 mx-auto bg-[#c6c5c548] rounded-3xl shadow-xl p-2 lg:p-10 flex flex-col lg:flex-row gap-10 relative z-30">
-=======
 
             <div className="max-w-6xl mt-16 mx-auto z-20 relative bg-gray-100 rounded-3xl shadow-xl p-2">
                 <div className="max-w-6xl pt-15 mx-auto bg-[#c6c5c548] rounded-3xl shadow-xl p-2 lg:p-10 flex flex-col lg:flex-row gap-10 relative z-30">
->>>>>>> 4c7d0144682bc803d6e08278e6b0d82565b73bb1
                     {/* Left Side */}
                     <div  className="  flex-1 flex flex-col justify-between">
                         {/* Toggle */}
@@ -183,7 +172,7 @@ export default function PricingCard() {
                                         transition={{ duration: 0.3, delay: idx * 0.1 }}
                                           className=" flex items-center gap-2 text-gray-600"
                                     >
-                                        <span   className=" border flex justify-center align-middle pb-1 px-1 rounded-full">&nbsp;+&nbsp;</span>
+                                        <span   className="cursor-target border flex justify-center align-middle pb-1 px-1 rounded-full">&nbsp;+&nbsp;</span>
                                         <span   className=" font-medium text-[14px] text-[#898989]">{feature}</span>
                                     </motion.li>
                                 ))}
@@ -193,18 +182,6 @@ export default function PricingCard() {
                         {/* Testimonial */}
                         <div   className=" mt-4 pt-10">
                             <AnimatePresence mode="wait">
-<<<<<<< HEAD
-                                <motion.p
-                                    key={selectedPlan}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -20 }}
-                                    transition={{ duration: 0.6 }}
-                                      className=" text-gray-600 mb-5 font-medium lg:w-[280px] lg:text-[14px] w-full"
-                                >
-                                    Deniz created a website for us that exceeded all expectations. Professional, creative, and reliable. No one could have done it better. He is simply the best designer in the World.
-                                </motion.p>
-=======
                                 <BlurText
                                     text="WebTechnality created a website for us that exceeded all expectations. Professional, creative, and reliable. No one could have done it better. He is simply the best designer in the World."
                                     delay={100}
@@ -212,15 +189,14 @@ export default function PricingCard() {
                                     direction="bottom"
                                     className="text-gray-600 mb-5 font-medium lg:w-[280px] lg:text-[14px] w-full"
                                 /> 
->>>>>>> 4c7d0144682bc803d6e08278e6b0d82565b73bb1
                             </AnimatePresence>
 
                             {/* Author */}
                             <div   className=" flex items-center gap-3 p-1 mt-10">
-                                <div   className="cursor-target w-10 h-10 rounded-full bg-black/10 text-white flex items-center justify-center text-sm font-bold">
+                                <div   className="w-10 h-10 rounded-full bg-black/10 text-white flex items-center justify-center text-sm font-bold">
                                     <img src="/favicon.png" alt="Logo"   className=" w-8 h-8 sm:w-10 drop-shadow-xs drop-shadow-black sm:h-10 drop-shadow-md p-1" />
                                 </div>
-                                <div   className="cursor-target flex flex-col text-sm">
+                                <div   className="flex flex-col text-sm">
                                     <span   className=" font-semibold text-gray-900">David Krzemien</span>
                                     <span   className=" text-[#898989]">FeuersteinCars</span>
                                 </div>

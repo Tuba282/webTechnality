@@ -84,9 +84,9 @@ export default function Footer() {
                     {[FiMail, FiUser, FiLinkedin, FiInstagram].map((IconComp, idx) => (
                         <div
                             key={idx}
-                              className=" w-10 h-10 border border-gray-600 rounded-full flex items-center justify-center hover:border-white hover:text-white transition-all duration-300 cursor-pointer text-[#898989]"
+                              className="cursor-target w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:border-white hover:text-white transition-all duration-300 cursor-pointer text-[#e4e1e19a]"
                         >
-                            <IconComp size={18} />
+                            <IconComp  size={18} />
                         </div>
                     ))}
                 </div>
