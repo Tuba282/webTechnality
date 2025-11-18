@@ -7,7 +7,7 @@ import { IoSearch } from "react-icons/io5";
 import { MdOutlineAnimation } from "react-icons/md";
 import { TbBrandArc } from "react-icons/tb";
 import { TbBrandCtemplar } from "react-icons/tb";
-import BlurText from "@/components/BlurText";
+import BlurText from "@/components/ui/BlurText";
 
 const Brand = () => {
     const badgeVariantLeft = {
@@ -36,7 +36,7 @@ const Brand = () => {
             {/* LEFT BADGES */}
             <div className="absolute left-10 lg:left-20 xl:left-30 xxl:left-40 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-6 items-end">
 
-                <motion.div 
+                <motion.div
                     custom={0}
                     variants={badgeVariantLeft}
                     initial="hidden"
@@ -49,7 +49,7 @@ const Brand = () => {
                         <p className="font-medium">Design systems</p>
                     </div>
                 </motion.div>
-                <motion.div 
+                <motion.div
                     custom={1}
                     variants={badgeVariantLeft}
                     initial="hidden"
@@ -62,7 +62,7 @@ const Brand = () => {
                         <p className="font-medium">UX Design</p>
                     </div>
                 </motion.div>
-                <motion.div 
+                <motion.div
                     custom={2}
                     variants={badgeVariantLeft}
                     initial="hidden"
@@ -81,31 +81,27 @@ const Brand = () => {
 
             {/* MAIN CENTER TEXT */}
             <div className="text-center px-10 relative z-10">
-                <p className="text-gray-500 text-2xl font-[Charm-Regular] italic mb-4 tracking-wide flex justify-center items-center gap-4">
-                    <div className="h-px w-16 bg-[#898989] opacity-40"></div> 
-                    Hello! 
+                <div className="text-gray-500 text-2xl font-[Charm-Regular] italic mb-4 tracking-wide flex justify-center items-center gap-4">
                     <div className="h-px w-16 bg-[#898989] opacity-40"></div>
-                </p>
+                    Hello!
+                    <div className="h-px w-16 bg-[#898989] opacity-40"></div>
+                </div>
 
-                <h3 className="font-light sm:text-5xl text-4xl">
-                    
+                <div className="w-full lg:w-[600px] xl:w-[760px] mx-auto">
                     <BlurText
-                    text="We help brands grow with standout"
-                    delay={150}
-                    animateBy="words"
-                    direction="top"
-                    onAnimationComplete={handleAnimationComplete}
-                    className="text-2xl mb-8"
-                    /><br />
-                    design, clear branding, and content <br />
-                    that drives <span className="text-gray-400">results.</span>
-                </h3>
+                        text="We help brands grow with standout design, clear branding, and content that drives results."
+                        delay={100}
+                        animateBy="words"
+                        direction="bottom"
+                        className="font-light sm:text-5xl text-4xl text-center! inline-block!"
+                    />
+                </div>
             </div>
 
             {/* RIGHT BADGES */}
             <div className="absolute right-10 lg:right-20 xl:right-30 xxl:right-40 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-6">
 
-                <motion.div 
+                <motion.div
                     custom={0}
                     variants={badgeVariantRight}
                     initial="hidden"
@@ -118,7 +114,7 @@ const Brand = () => {
                         <p className="font-medium">Animation </p>
                     </div>
                 </motion.div>
-                <motion.div 
+                <motion.div
                     custom={1}
                     variants={badgeVariantRight}
                     initial="hidden"
@@ -131,7 +127,7 @@ const Brand = () => {
                         <p className="font-medium">Branding</p>
                     </div>
                 </motion.div>
-                <motion.div 
+                <motion.div
                     custom={2}
                     variants={badgeVariantRight}
                     initial="hidden"

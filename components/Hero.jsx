@@ -6,6 +6,7 @@ import HeroSwiper from "./HeroSwiper";
 import { FaCircle } from "react-icons/fa";
 import Button from "./Button";
 import DiagonalText from "./DiagonalScroller";
+import BlurText from "./ui/BlurText";
 
 const Hero = () => {
 
@@ -13,7 +14,7 @@ const Hero = () => {
     <section className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden px-4 text-center">
       {/* ---- Floating Boxes ---- */}
 
-    <DiagonalText className=""/>
+      <DiagonalText className="" />
       <motion.p
         initial={{ opacity: 0, }}
         animate={{ opacity: 1, }}
@@ -90,15 +91,13 @@ const Hero = () => {
 
 
 
-      <motion.p
-        initial={{ opacity: 0, y: 0 }}
-        animate={{ opacity: 1, y: 40 }}
-        transition={{ duration: 0.9 }}
-        delay={2.2}
+      <BlurText
+        text="We dont just make brands pretty — we craft smart design that fuels real business growth."
+        delay={50}
+        animateBy="words"
+        direction="bottom"
         className="sm:w-[400] text-sm sm:text-base md:text-lg text-gray-600 leading-tight tracking-wide font-light max-w-xl mt-6"
-      >
-        We dont just make brands pretty — we craft smart design that fuels real business growth.
-      </motion.p>
+      />
       <Button />
 
     </section>

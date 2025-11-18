@@ -7,10 +7,12 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import { FaPaintBrush, FaCode, FaMobileAlt } from "react-icons/fa";
+import { FaMobileAlt } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
 import { RiPenNibFill } from "react-icons/ri";
 import { RiCodeAiLine } from "react-icons/ri";
+import SplitText from "@/components/ui/SplitText";
+import BlurText from "@/components/ui/BlurText";
 
 // ------------------- DATA -------------------
 const serviceData = {
@@ -78,7 +80,14 @@ export default function Services() {
           <h2 className="font-light lg:text-6xl  text-4xl sm:text-3xl text-center mb-6">
             Our <span className="text-gray-500">Services.</span>
           </h2>
-          <p className="text-center font-[Mulish] font-light">As a top web development company, our services cover everything from unique web design to e-commerce development, mobile application development, or custom digital marketing strategies that would help bring your online business to a new level.</p>
+          <BlurText
+            text="As a leading web development company, we provide end-to-end services—from custom web design and e-commerce solutions to mobile app development and tailored digital marketing strategies—to elevate your online business to the next level."
+            delay={50}
+            animateBy="words"
+            direction="bottom"
+            className="text-center! font-[Mulish] font-light"
+          />
+
         </div>
         <div className="">
           {/* Heading */}
@@ -91,7 +100,7 @@ export default function Services() {
         </div>
 
       </div>
-      
+
 
 
       {/* RIGHT SIDE CONTENT */}
@@ -103,21 +112,21 @@ export default function Services() {
           <Button
             active={active === "design"}
             onClick={() => setActive("design")}
-            icon={<RiPenNibFill className="font-light"/>}
+            icon={<RiPenNibFill className="font-light" />}
             label="Design"
           />
 
           <Button
             active={active === "development"}
             onClick={() => setActive("development")}
-            icon={<RiCodeAiLine className="font-light"/>}
+            icon={<RiCodeAiLine className="font-light" />}
             label="Development"
           />
 
           <Button
             active={active === "mobile"}
             onClick={() => setActive("mobile")}
-            icon={<FaMobileAlt className="font-light"/>}
+            icon={<FaMobileAlt className="font-light" />}
             label="Mobile App"
           />
         </div>
