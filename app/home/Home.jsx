@@ -1,13 +1,13 @@
 import Brand from '@/components/Brand';
+import DiagonalScroller from '@/components/DiagonalScroller';
 import Hero from '@/components/Hero'
 import Footer from '@/components/Footer'
 import { HeroMarquee } from '@/components/ScrollMarquee';
-// import { ThreeDMarquee } from '@/components/ui/3d-marquee';
-// import { ContainerScroll } from '@/components/ui/container-scroll-animation'
 import React from 'react'
 import PricingCard from '@/components/PricingCard';
 import FeatureGrid from '@/components/FeatureGrid';
 import { Faq } from '@/components/Faq';
+import OurProcess from '@/components/OurProcess';
 
 const Home = () => {
   const images = [
@@ -56,13 +56,15 @@ const Home = () => {
           />
 
       </ContainerScroll> */}
-      <HeroMarquee/>
-      <Brand/>
-      <PricingCard/>
-      <FeatureGrid/>
-      <Faq/>
-      <Footer/>
-      </div>
+      
+      <HeroMarquee />
+      <Brand />
+      <OurProcess/>
+      <PricingCard />
+      <FeatureGrid />
+      <Faq />
+      <Footer />
+    </div>
   )
 }
 

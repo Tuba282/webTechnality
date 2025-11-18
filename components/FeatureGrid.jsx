@@ -19,7 +19,7 @@ const features = [
 export default function IconGrid() {
     return (
         <div className=" max-w-6xl mx-auto py-12 mt-10 px-1 sm:px-6 lg:px-20">
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8 gap-2">
                 {features.map(({ icon: Icon, label }, idx) => (
                     <div key={idx} className="flex items-center justify-center gap-4">
                         <div className="w-12 h-12 flex items-center justify-center text-[#898989] text-xl">
