@@ -27,10 +27,10 @@ const Brand = () => {
         })
     }
     return (
-        <section className="relative w-full h-[80vh] flex items-center justify-center overflow-hidden">
+        <section className="relative w-full h-[80vh] flex items-center justify-center bg-[#f3f3f3] overflow-hidden">
 
             {/* Background light streaks */}
-            {/* <div className="absolute inset-0 bg-[linear-gradient(115deg,#ffffff_0%,#e8e8e8_40%,#f3f3f3_100%)] opacity-70"></div> */}
+            <div className="absolute inset-0 bg-[linear-gradient(115deg,#ffffff_0%,#e8e8e8_40%,#f3f3f3_100%)] opacity-70"></div>
 
             {/* LEFT BADGES */}
             <div className="absolute left-10 lg:left-20 xl:left-30 xxl:left-40 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-6 items-end">
@@ -80,13 +80,11 @@ const Brand = () => {
 
             {/* MAIN CENTER TEXT */}
             <div className="text-center px-10 relative z-10">
-                <p className="text-gray-500 text-2xl font-[Charm-Regular] italic mb-4 tracking-wide flex justify-center items-center gap-4">
-                    <div className="h-px w-16 bg-[#898989] opacity-40"></div> 
-                    Hello! 
-                    <div className="h-px w-16 bg-[#898989] opacity-40"></div>
+                <p className="text-gray-500 italic mb-4 tracking-wide">
+                    ——— Hello! ———
                 </p>
 
-                <h1 className="font-light sm:text-5xl text-4xl">
+                <h1 className="text-5xl font-sans font-light leading-tight">
                     We help brands grow with standout <br />
                     design, clear branding, and content <br />
                     that drives <span className="text-gray-400">results.</span>
