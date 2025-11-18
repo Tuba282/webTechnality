@@ -1,9 +1,13 @@
 import Brand from '@/components/Brand';
 import Hero from '@/components/Hero'
+import Footer from '@/components/Footer'
 import { HeroMarquee } from '@/components/ScrollMarquee';
-import { ThreeDMarquee } from '@/components/ui/3d-marquee';
-import { ContainerScroll } from '@/components/ui/container-scroll-animation'
+// import { ThreeDMarquee } from '@/components/ui/3d-marquee';
+// import { ContainerScroll } from '@/components/ui/container-scroll-animation'
 import React from 'react'
+import PricingCard from '@/components/PricingCard';
+import FeatureGrid from '@/components/FeatureGrid';
+import { Faq } from '@/components/Faq';
 
 const Home = () => {
   const images = [
@@ -40,7 +44,7 @@ const Home = () => {
     "https://assets.aceternity.com/world-map.webp",
   ];
   return (
-    <div className=''>
+    <div className='bg-[#D3D3D3]'>
       <Hero />
       {/* <ContainerScroll>
         <video
@@ -54,6 +58,10 @@ const Home = () => {
       </ContainerScroll> */}
       <HeroMarquee/>
       <Brand/>
+      <PricingCard/>
+      <FeatureGrid/>
+      <Faq/>
+      <Footer/>
       </div>
   )
 }
