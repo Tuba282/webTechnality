@@ -55,6 +55,7 @@ const Home = () => {
           />
 
       </ContainerScroll> */}
+      
       <HeroMarquee />
       <Brand />
       <PricingCard />

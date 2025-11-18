@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { GoArrowRight } from "react-icons/go";
+import DiagonalText from "./DiagonalScroller";
+import Diagonal2D from "./Diagnol2D";
 
 export default function PricingCard() {
     const [selectedPlan, setSelectedPlan] = useState("Design");
@@ -46,25 +48,26 @@ export default function PricingCard() {
 
     return (
 
-        <div className="">
+        <div className="relative p-2">
+        <Diagonal2D className={`z-0`} />
             <div>
                 {/* Hero Text */}
                 <div className="max-w-[90%] mx-auto sm:max-w-[70%] text-center ">
                     <div className="flex items-center justify-center gap-5 my-6">
-                        <div className="h-[1px] w-16 sm:w-28 bg-[#898989] opacity-40"></div>
-                        <span className="lg:text-[16px] italic tracking-wider text-[#8e8e8e]" style={{ wordSpacing: "3px" }}>
+                        <div className="h-px w-16 bg-[#898989] opacity-40"></div>
+                        <span className="text-gray-500 text-2xl font-[Charm-Regular] italic tracking-wide" style={{ wordSpacing: "3px" }}>
                             Pricing
                         </span>
-                        <div className="h-[1px] w-16 sm:w-28 bg-[#898989] opacity-40"></div>
+                        <div className="h-px w-16 bg-[#898989] opacity-40"></div>
                     </div>
                 </div>
-                <h4 className="lg:text-[37px] text-2xl text-center sm:text-6xl leading-tight">
+                <h4 className="font-light lg:text-6xl  text-4xl sm:text-3xl text-center ">
                     Fixed Price, Zero Limits
                 </h4>
             </div>
-            <div className="max-w-6xl mt-16 mx-auto bg-gray-100 rounded-3xl shadow-xl p-2">
+            <div className="max-w-6xl mt-16 mx-auto z-20 relative bg-gray-100 rounded-3xl shadow-xl p-2">
 
-                <div className="max-w-6xl pt-15 mx-auto bg-[#c6c5c548] rounded-3xl shadow-xl p-2 lg:p-10 flex flex-col lg:flex-row gap-10 relative">
+                <div className="max-w-6xl pt-15 mx-auto bg-[#c6c5c548] rounded-3xl shadow-xl p-2 lg:p-10 flex flex-col lg:flex-row gap-10 relative z-30">
                     {/* Left Side */}
                     <div className="flex-1 flex flex-col justify-between">
                         {/* Toggle */}
@@ -205,6 +208,7 @@ export default function PricingCard() {
                     </motion.div>
                 </div>
             </div>
+
         </div>
     );
 }

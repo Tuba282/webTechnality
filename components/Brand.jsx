@@ -80,11 +80,13 @@ const Brand = () => {
 
             {/* MAIN CENTER TEXT */}
             <div className="text-center px-10 relative z-10">
-                <p className="text-gray-500 italic mb-4 tracking-wide">
-                    ——— Hello! ———
+                <p className="text-gray-500 text-2xl font-[Charm-Regular] italic mb-4 tracking-wide flex justify-center items-center gap-4">
+                    <div className="h-px w-16 bg-[#898989] opacity-40"></div> 
+                    Hello! 
+                    <div className="h-px w-16 bg-[#898989] opacity-40"></div>
                 </p>
 
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-sans font-light leading-tight">
+                <h1 className="font-light sm:text-5xl text-4xl">
                     We help brands grow with standout <br />
                     design, clear branding, and content <br />
                     that drives <span className="text-gray-400">results.</span>

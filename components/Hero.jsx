@@ -4,14 +4,16 @@ import React from "react";
 import { AnimatedLetters } from "./SplitTextGSAP";
 import HeroSwiper from "./HeroSwiper";
 import { FaCircle } from "react-icons/fa";
-import { GoArrowRight } from "react-icons/go";
 import Button from "./Button";
+import DiagonalText from "./DiagonalScroller";
 
 const Hero = () => {
+
   return (
     <section className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden px-4 text-center">
       {/* ---- Floating Boxes ---- */}
 
+    <DiagonalText className=""/>
       <motion.p
         initial={{ opacity: 0, }}
         animate={{ opacity: 1, }}
@@ -97,8 +99,7 @@ const Hero = () => {
       >
         We dont just make brands pretty — we craft smart design that fuels real business growth.
       </motion.p>
-      <Button/>
-
+      <Button />
 
     </section>
   );

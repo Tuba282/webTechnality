@@ -77,6 +77,15 @@ body {
   src: url(../utlis/Fonts/Mulish-Italic-VariableFont_wght.ttf) format("truetype");
 }
 
+@font-face{
+  font-family: Charm-Regular;
+  src: url(../utlis/Fonts/Charm-Regular.ttf) format("truetype");
+}
+@font-face{
+  font-family: Charm-Bold;
+  src: url(../utlis/Fonts/Charm-Bold.ttf) format("truetype");
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
