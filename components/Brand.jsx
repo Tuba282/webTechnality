@@ -30,7 +30,10 @@ const Brand = () => {
     return (
         <section  className="relative w-full h-[80vh] flex items-center justify-center overflow-hidden">
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4c7d0144682bc803d6e08278e6b0d82565b73bb1
             {/* LEFT BADGES */}
             <div   className=" absolute left-10 lg:left-20 xl:left-30 xxl:left-40 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-6 items-end">
 

@@ -8,8 +8,13 @@ import PricingCard from '@/components/PricingCard';
 import FeatureGrid from '@/components/FeatureGrid';
 import { Faq } from '@/components/Faq';
 import Services from '@/screens/Services/Services';
+<<<<<<< HEAD
 import TargetCursor from '@/components/ui/TargetCursor';
 import ProjectsSection from '@/components/ProjectsSection';
+=======
+import OurProcess from '@/components/OurProcess';
+import FounderSection from '@/components/FounderSection';
+>>>>>>> 4c7d0144682bc803d6e08278e6b0d82565b73bb1
 
 const Home = () => {
   const images = [
@@ -66,8 +71,14 @@ const Home = () => {
 
       <HeroMarquee />
       <Brand />
+<<<<<<< HEAD
       <Services />
       <ProjectsSection/>
+=======
+      <OurProcess/>
+      <Services/>
+      <FounderSection/>
+>>>>>>> 4c7d0144682bc803d6e08278e6b0d82565b73bb1
       <PricingCard />
       <FeatureGrid />
       <Faq />

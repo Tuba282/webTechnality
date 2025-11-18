@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { GoArrowRight } from "react-icons/go";
-import DiagonalText from "./DiagonalScroller";
 import Diagonal2D from "./Diagnol2D";
+import BlurText from "./ui/BlurText";
 
 export default function PricingCard() {
     const [selectedPlan, setSelectedPlan] = useState("Design");
@@ -48,8 +48,13 @@ export default function PricingCard() {
 
     return (
 
+<<<<<<< HEAD
         <div  className="relative p-2">
         <Diagonal2D className={`z-0`} />
+=======
+        <div className="relative p-2">
+            <Diagonal2D className={`z-0`} />
+>>>>>>> 4c7d0144682bc803d6e08278e6b0d82565b73bb1
             <div>
                 {/* Hero Text */}
                 <div  className="max-w-[90%] mx-auto sm:max-w-[70%] text-center ">
@@ -65,9 +70,15 @@ export default function PricingCard() {
                     <span className="text-gray-400"> Fixed </span> Price, <span className="text-gray-400"> Zero</span>  Limits
                 </h4>
             </div>
+<<<<<<< HEAD
             <div  className="max-w-6xl mt-16 mx-auto z-20 relative bg-gray-100 rounded-3xl shadow-xl p-2">
 
                 <div  className="max-w-6xl pt-15 mx-auto bg-[#c6c5c548] rounded-3xl shadow-xl p-2 lg:p-10 flex flex-col lg:flex-row gap-10 relative z-30">
+=======
+
+            <div className="max-w-6xl mt-16 mx-auto z-20 relative bg-gray-100 rounded-3xl shadow-xl p-2">
+                <div className="max-w-6xl pt-15 mx-auto bg-[#c6c5c548] rounded-3xl shadow-xl p-2 lg:p-10 flex flex-col lg:flex-row gap-10 relative z-30">
+>>>>>>> 4c7d0144682bc803d6e08278e6b0d82565b73bb1
                     {/* Left Side */}
                     <div  className="  flex-1 flex flex-col justify-between">
                         {/* Toggle */}
@@ -182,6 +193,7 @@ export default function PricingCard() {
                         {/* Testimonial */}
                         <div   className=" mt-4 pt-10">
                             <AnimatePresence mode="wait">
+<<<<<<< HEAD
                                 <motion.p
                                     key={selectedPlan}
                                     initial={{ opacity: 0, y: 20 }}
@@ -192,6 +204,15 @@ export default function PricingCard() {
                                 >
                                     Deniz created a website for us that exceeded all expectations. Professional, creative, and reliable. No one could have done it better. He is simply the best designer in the World.
                                 </motion.p>
+=======
+                                <BlurText
+                                    text="WebTechnality created a website for us that exceeded all expectations. Professional, creative, and reliable. No one could have done it better. He is simply the best designer in the World."
+                                    delay={100}
+                                    animateBy="words"
+                                    direction="bottom"
+                                    className="text-gray-600 mb-5 font-medium lg:w-[280px] lg:text-[14px] w-full"
+                                /> 
+>>>>>>> 4c7d0144682bc803d6e08278e6b0d82565b73bb1
                             </AnimatePresence>
 
                             {/* Author */}
