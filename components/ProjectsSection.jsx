@@ -40,7 +40,7 @@ export default function ProjectsSection() {
                     className="fixed z-[100] pointer-events-none w-24 h-24 rounded-full bg-black/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white text-xs"
                     style={{ left: cursor.x - 50, top: cursor.y - 50 }}
                 >
-                    <ArrowRight  className="text-md text-white/60"/>
+                    <ArrowRight className="text-md text-white/60" />
                 </motion.div>
             )}
 

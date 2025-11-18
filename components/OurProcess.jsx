@@ -91,9 +91,32 @@ export default function OurProcess() {
                         <div className="h-px w-16 bg-[#898989] opacity-40"></div>
                     </div>
 
-                    <h2 className="font-light lg:text-6xl text-4xl sm:text-3xl">
-                        Here’s how it works
-                    </h2>
+                    <div className="font-light lg:text-6xl text-4xl sm:text-3xl">
+                        Here’s how it{" "}
+                        <span className="relative inline-block">
+                            <span className="relative z-10 text-gray-700  px-2">
+                                works
+                            </span>
+
+                            {/* SVG UNDERLINE / MARK */}
+                            <svg
+                                viewBox="0 0 200 73"
+                                fill="none"
+                                className="absolute left-0 right-0 bottom-0 w-full h-full pointer-events-none"
+                                style={{ transform: "translateY(60%)" }}
+                            >
+                                <motion.path
+                                    initial={{ pathLength: 0 }}
+                                    whileInView={{ pathLength: 1 }}
+                                    transition={{ duration: 1.25, ease: "easeInOut" }}
+                                    d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                                    stroke="#000"
+                                    strokeWidth="5"
+                                />
+                            </svg>
+                        </span>
+                    </div>
+
                 </motion.div>
 
                 {/* Steps Grid */}
@@ -146,8 +169,8 @@ export default function OurProcess() {
                         className="border-0 lg:border-e-2 border-gray-400 flex flex-col gap-10"
                     >
                         <div className="flex flex-row lg:w-[80%] w-[85%]  gap-6">
-                            
-                           <BlurText
+
+                            <BlurText
                                 text=" Working with Denqid was unbelivable. He instantly understood our vision and translated it into a sleek, intuitive Website. The process felt effortless, and the results exceeded our expectations."
                                 delay={100}
                                 animateBy="words"
@@ -155,7 +178,7 @@ export default function OurProcess() {
                                 className="font-medium leading-relaxed text-gray-800"
                             />
 
-                               
+
                             <p className=" text-gray-400 text-4xl">❞</p>
                         </div>
 
@@ -188,14 +211,14 @@ export default function OurProcess() {
                         <div className="h-[130px] hidden lg:block "></div>
 
                         <div className="flex flex-row lg:w-[80%] w-[85%]  gap-6">
-                           <BlurText
+                            <BlurText
                                 text=" WebTechnality brings clarity to chaos. His design work is not only beautiful but deeply strategic. He helped us rebrand from the ground up, and our audience response has been perfect."
                                 delay={100}
                                 animateBy="words"
                                 direction="bottom"
                                 className="font-medium leading-relaxed text-gray-800"
                             />
-                           
+
                             <p className=" text-gray-400 text-4xl">❞</p>
                         </div>
 
@@ -216,6 +239,6 @@ export default function OurProcess() {
                     </motion.div>
                 </div>
             </section>
-        </div>
+        </div >
     );
 }
