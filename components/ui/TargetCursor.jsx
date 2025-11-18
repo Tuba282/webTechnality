@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useRef, useCallback, useMemo } from 'react';
+import { useEffect, useRef, useCallback, useState ,useMemo} from 'react';
 import { gsap } from 'gsap';
 
 const TargetCursor = ({
@@ -19,13 +19,21 @@ const TargetCursor = ({
   const tickerFnRef = useRef(null);
   const activeStrengthRef = useRef(0);
 
-  const isMobile = useMemo(() => {
-    const hasTouchScreen = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-    const isSmallScreen = window.innerWidth <= 768;
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    const mobileRegex = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i;
-    const isMobileUserAgent = mobileRegex.test(userAgent.toLowerCase());
-    return (hasTouchScreen && isSmallScreen) || isMobileUserAgent;
+  // determine mobile only on the client to avoid SSR window access
+  const [isMobile, setIsMobile] = useState(true);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    try {
+      const hasTouchScreen = 'ontouchstart' in window || (navigator && navigator.maxTouchPoints > 0);
+      const isSmallScreen = window.innerWidth <= 768;
+      const userAgent = (navigator && (navigator.userAgent || navigator.vendor || window.opera)) || '';
+      const mobileRegex = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i;
+      const isMobileUserAgent = mobileRegex.test(userAgent.toLowerCase());
+      setIsMobile((hasTouchScreen && isSmallScreen) || isMobileUserAgent);
+    } catch (e) {
+      setIsMobile(false);
+    }
   }, []);
 
   const constants = useMemo(
