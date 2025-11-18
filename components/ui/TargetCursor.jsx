@@ -1,6 +1,6 @@
-"use client"
 import { useEffect, useRef, useCallback, useMemo } from 'react';
 import { gsap } from 'gsap';
+import './TargetCursor.css';
 
 const TargetCursor = ({
   targetSelector = '.cursor-target',
@@ -28,10 +28,13 @@ const TargetCursor = ({
     return (hasTouchScreen && isSmallScreen) || isMobileUserAgent;
   }, []);
 
-  const constants = useMemo(() => ({
-    borderWidth: 3,
-    cornerSize: 12
-  }), []);
+  const constants = useMemo(
+    () => ({
+      borderWidth: 3,
+      cornerSize: 12
+    }),
+    []
+  );
 
   const moveCursor = useCallback((x, y) => {
     if (!cursorRef.current) return;
@@ -232,12 +235,16 @@ const TargetCursor = ({
           ];
           const tl = gsap.timeline();
           corners.forEach((corner, index) => {
-            tl.to(corner, {
-              x: positions[index].x,
-              y: positions[index].y,
-              duration: 0.3,
-              ease: 'power3.out'
-            }, 0);
+            tl.to(
+              corner,
+              {
+                x: positions[index].x,
+                y: positions[index].y,
+                duration: 0.3,
+                ease: 'power3.out'
+              },
+              0
+            );
           });
         }
 
@@ -248,10 +255,7 @@ const TargetCursor = ({
             spinTl.current.kill();
             spinTl.current = gsap
               .timeline({ repeat: -1 })
-              .to(
-              cursorRef.current,
-              { rotation: '+=360', duration: spinDuration, ease: 'none' }
-            );
+              .to(cursorRef.current, { rotation: '+=360', duration: spinDuration, ease: 'none' });
             gsap.to(cursorRef.current, {
               rotation: normalizedRotation + 360,
               duration: spinDuration * (1 - normalizedRotation / 360),
@@ -303,10 +307,7 @@ const TargetCursor = ({
       spinTl.current.kill();
       spinTl.current = gsap
         .timeline({ repeat: -1 })
-        .to(
-        cursorRef.current,
-        { rotation: '+=360', duration: spinDuration, ease: 'none' }
-      );
+        .to(cursorRef.current, { rotation: '+=360', duration: spinDuration, ease: 'none' });
     }
   }, [spinDuration, isMobile]);
 
@@ -315,12 +316,12 @@ const TargetCursor = ({
   }
 
   return (
-    <div ref={cursorRef}   className=" target-cursor-wrapper">
-      <div ref={dotRef}   className=" target-cursor-dot" />
-      <div   className=" target-cursor-corner corner-tl" />
-      <div   className=" target-cursor-corner corner-tr" />
-      <div   className=" target-cursor-corner corner-br" />
-      <div   className=" target-cursor-corner corner-bl" />
+    <div ref={cursorRef} className="target-cursor-wrapper">
+      <div ref={dotRef} className="target-cursor-dot" />
+      <div className="target-cursor-corner corner-tl" />
+      <div className="target-cursor-corner corner-tr" />
+      <div className="target-cursor-corner corner-br" />
+      <div className="target-cursor-corner corner-bl" />
     </div>
   );
 };
