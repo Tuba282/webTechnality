@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import BlurText from "./ui/BlurText";
 
 // --------------------
 // Animation Variants
@@ -64,7 +65,7 @@ const steps = [
 
 export default function OurProcess() {
     return (
-        <div className="bg-[#d7d7d7] w-full">
+        <div className=" w-full">
 
             {/* ----------------------------- */}
             {/* TOP SECTION — PROCESS STEPS  */}
@@ -145,10 +146,16 @@ export default function OurProcess() {
                         className="border-0 lg:border-e-2 border-gray-400 flex flex-col gap-10"
                     >
                         <div className="flex flex-row lg:w-[80%] w-[85%]  gap-6">
-                            <p className="font-medium leading-relaxed text-gray-800">
-                                Working with Denqid was unbelivable. He instantly understood our vision and translated it into a sleek, intuitive Website. The process felt effortless, and the results exceeded our expectations.
+                            
+                           <BlurText
+                                text=" Working with Denqid was unbelivable. He instantly understood our vision and translated it into a sleek, intuitive Website. The process felt effortless, and the results exceeded our expectations."
+                                delay={100}
+                                animateBy="words"
+                                direction="bottom"
+                                className="font-medium leading-relaxed text-gray-800"
+                            />
 
-                            </p>
+                               
                             <p className=" text-gray-400 text-4xl">❞</p>
                         </div>
 
@@ -181,9 +188,14 @@ export default function OurProcess() {
                         <div className="h-[130px] hidden lg:block "></div>
 
                         <div className="flex flex-row lg:w-[80%] w-[85%]  gap-6">
-                            <p className="font-medium leading-relaxed text-gray-800">
-                                WebTechnality brings clarity to chaos. His design work is not only beautiful but deeply strategic. He helped us rebrand from the ground up, and our audience response has been perfect.
-                                  </p>
+                           <BlurText
+                                text=" WebTechnality brings clarity to chaos. His design work is not only beautiful but deeply strategic. He helped us rebrand from the ground up, and our audience response has been perfect."
+                                delay={100}
+                                animateBy="words"
+                                direction="bottom"
+                                className="font-medium leading-relaxed text-gray-800"
+                            />
+                           
                             <p className=" text-gray-400 text-4xl">❞</p>
                         </div>
 

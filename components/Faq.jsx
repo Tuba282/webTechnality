@@ -62,7 +62,7 @@ export const Faq = () => {
                 </div>
 
                  <h4 className="font-light lg:text-6xl  text-4xl sm:text-3xl text-center ">
-                   Your Questions, Answered
+                   Your Questions, <span className="text-gray-400">Answered</span>
                 </h4>
             </motion.div>
 

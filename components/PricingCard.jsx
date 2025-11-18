@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { GoArrowRight } from "react-icons/go";
-import DiagonalText from "./DiagonalScroller";
 import Diagonal2D from "./Diagnol2D";
+import BlurText from "./ui/BlurText";
 
 export default function PricingCard() {
     const [selectedPlan, setSelectedPlan] = useState("Design");
@@ -49,7 +49,7 @@ export default function PricingCard() {
     return (
 
         <div className="relative p-2">
-        <Diagonal2D className={`z-0`} />
+            <Diagonal2D className={`z-0`} />
             <div>
                 {/* Hero Text */}
                 <div className="max-w-[90%] mx-auto sm:max-w-[70%] text-center ">
@@ -182,16 +182,13 @@ export default function PricingCard() {
                         {/* Testimonial */}
                         <div className="mt-4 pt-10">
                             <AnimatePresence mode="wait">
-                                <motion.p
-                                    key={selectedPlan}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -20 }}
-                                    transition={{ duration: 0.6 }}
+                                <BlurText
+                                    text="WebTechnality created a website for us that exceeded all expectations. Professional, creative, and reliable. No one could have done it better. He is simply the best designer in the World."
+                                    delay={100}
+                                    animateBy="words"
+                                    direction="bottom"
                                     className="text-gray-600 mb-5 font-medium lg:w-[280px] lg:text-[14px] w-full"
-                                >
-                                    Deniz created a website for us that exceeded all expectations. Professional, creative, and reliable. No one could have done it better. He is simply the best designer in the World.
-                                </motion.p>
+                                /> 
                             </AnimatePresence>
 
                             {/* Author */}
