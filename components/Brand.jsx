@@ -7,6 +7,7 @@ import { IoSearch } from "react-icons/io5";
 import { MdOutlineAnimation } from "react-icons/md";
 import { TbBrandArc } from "react-icons/tb";
 import { TbBrandCtemplar } from "react-icons/tb";
+import BlurText from "@/components/BlurText";
 
 const Brand = () => {
     const badgeVariantLeft = {
@@ -86,11 +87,19 @@ const Brand = () => {
                     <div className="h-px w-16 bg-[#898989] opacity-40"></div>
                 </p>
 
-                <h1 className="font-light sm:text-5xl text-4xl">
-                    We help brands grow with standout <br />
+                <h3 className="font-light sm:text-5xl text-4xl">
+                    
+                    <BlurText
+                    text="We help brands grow with standout"
+                    delay={150}
+                    animateBy="words"
+                    direction="top"
+                    onAnimationComplete={handleAnimationComplete}
+                    className="text-2xl mb-8"
+                    /><br />
                     design, clear branding, and content <br />
                     that drives <span className="text-gray-400">results.</span>
-                </h1>
+                </h3>
             </div>
 
             {/* RIGHT BADGES */}
