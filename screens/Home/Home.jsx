@@ -2,8 +2,11 @@ import Brand from '@/components/Brand';
 import Hero from '@/components/Hero'
 import Footer from '@/components/Footer'
 import { HeroMarquee } from '@/components/ScrollMarquee';
+<<<<<<< HEAD
 // import { ThreeDMarquee } from '@/components/ui/3d-marquee';
 // import { ContainerScroll } from '@/components/ui/container-scroll-animation'
+=======
+>>>>>>> 45cb35248ac91638d4a87679067d180967251334
 import React from 'react'
 import PricingCard from '@/components/PricingCard';
 import FeatureGrid from '@/components/FeatureGrid';
@@ -44,7 +47,11 @@ const Home = () => {
     "https://assets.aceternity.com/world-map.webp",
   ];
   return (
+<<<<<<< HEAD
     <div className='bg-[#D3D3D3]'>
+=======
+    <div>
+>>>>>>> 45cb35248ac91638d4a87679067d180967251334
       <Hero />
       {/* <ContainerScroll>
         <video
@@ -56,6 +63,7 @@ const Home = () => {
           />
 
       </ContainerScroll> */}
+<<<<<<< HEAD
       <HeroMarquee/>
       <Brand/>
       <PricingCard/>
@@ -63,6 +71,11 @@ const Home = () => {
       <Faq/>
       <Footer/>
       </div>
+=======
+      <HeroMarquee />
+      <Brand />
+    </div>
+>>>>>>> 45cb35248ac91638d4a87679067d180967251334
   )
 }
 
