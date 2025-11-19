@@ -73,7 +73,7 @@ export default function Footer() {
             </motion.div>
 
             {/* Footer */}
-            <footer   className=" w-full mt-24 flex flex-col md:flex-row justify-between items-center gap-5 sm:gap-8 px-4 sm:px-6 text-[#898989]">
+            <footer   className=" w-full mt-24 mb-8 flex flex-col md:flex-row justify-between items-center gap-5 sm:gap-8 px-4 sm:px-6 text-[#898989]">
                 <div   className=" flex flex-col md:flex-row gap-4 items-center text-sm">
                     <span   className=" py-2 px-1 border-t border-b border-white text-white">© WebTechnality, 2025</span>
                     <span   className=" hover:text-white py-2 cursor-pointer">Legal Notice</span>

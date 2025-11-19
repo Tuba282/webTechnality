@@ -95,7 +95,7 @@ export default function FounderSection() {
                             className="mt-6"
                         >
                             <p className="font-semibold text-lg">WebTechnality Ulmer</p>
-                            <p className="text-gray-500 text-sm">Abrar Malik, Founder</p>
+                            <p className="text-gray-500 text-sm"> Ibrar Malik, Founder</p>
                         </motion.div>
                     </div>
                 </motion.div>
@@ -129,7 +129,7 @@ export default function FounderSection() {
                     >
                         <div className="grid grid-cols-3 gap-4 text-gray-700 text-sm py-4 border-b border-gray-200">
                             <span className="opacity-70">Founder</span>
-                            <span>Abrar Malik</span>
+                            <span> Ibrar Malik</span>
                             <span className="text-right">2024 → Now</span>
                         </div>
 
