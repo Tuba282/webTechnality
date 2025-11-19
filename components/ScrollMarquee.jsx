@@ -45,7 +45,7 @@ export function HeroMarquee() {
     ];
     return (
         <div
-             className=" relative mx-auto my-10 flex w-full max-w-7xl min-h-[400px] px-1 h-screen flex-col items-center bg-black justify-center overflow-hidden rounded-4xl">
+             className=" relative mx-auto my-10 flex w-full  sx:w-[98%] sx:h-auto max-w-7xl min-h-[400px] px-2 md:h-screen flex-col items-center bg-black justify-center overflow-hidden rounded-4xl">
 
             <div   className=" z-20 flex flex-col justify-center items-center">
                 <Link href="/services">

@@ -10,6 +10,7 @@ import Services from '@/screens/Services/Services';
 import OurProcess from '@/components/OurProcess';
 import FounderSection from '@/components/FounderSection';
 import TargetCursor from '@/components/ui/TargetCursor';
+import ProjectsSection from '@/components/ProjectsSection';
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <HeroMarquee />
       <Brand />
       <OurProcess />
+      <ProjectsSection />
       <Services />
       <FounderSection />
       <PricingCard />

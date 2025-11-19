@@ -55,7 +55,7 @@ export default function ProjectsSection() {
             </div>
 
             {/* Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-10 px-2 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-10 max-w-6xl mx-auto">
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}
