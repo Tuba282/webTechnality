@@ -8,10 +8,10 @@ const features = [
     { icon: BsPhone, label: "Senior-level quality" },
     { icon: PiMonitorThin, label: "Systems thinking" },
     { icon: PiFlowArrow, label: "Developer-friendly" },
-    { icon: PiChartPieSlice, label: "Clear process " },
+    { icon: PiChartPieSlice, label: "Clean & Clear process " },
     { icon: PiLightbulbLight, label: "On-brand, every time" },
     { icon: CiSettings, label: "Reliable partner" },
-    { icon: PiSparkleLight, label: "Fast execution" },
+    { icon: PiSparkleLight, label: "Super Fast execution" },
     { icon: BsBox, label: "Thoughtful feedback" },
     { icon: TbUserScan, label: "Smooth handoff" },
 ];
