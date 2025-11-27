@@ -3,6 +3,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import DiagonalText from "@/components/DiagonalScroller";
 import Diagonal2D from '@/components/Diagnol2D';
+import CircularText from '@/components/ui/CircularText';
 
 const cards = [
     {
@@ -93,11 +94,11 @@ export default function AboutAbout() {
                                 className="rounded-lg w-full! h-[400px]! lg:h-[650px]! object-cover shadow"
                             />
                             {/* Rotating Circle */}
-                            <img
-                                src={card.circleImg}
-                                alt="circle"
-                                className="drop-shadow-xs drop-shadow-white absolute -top-14 -left-14 w-24 h-24! lg:w-40! lg:h-40! animate-spin pointer-events-none select-none"
-                                style={{ animationDuration: "6s" }}
+                            <CircularText
+                                text="Web --- Technality  ---- "
+                                onHover="speedUp"
+                                spinDuration={20}
+                                className=""
                             />
                         </div>
                         <div className="relative w-full lg:w-1/2 flex flex-col items-start">
