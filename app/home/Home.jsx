@@ -10,11 +10,13 @@ import Services from '@/screens/Services/Services';
 import OurProcess from '@/components/OurProcess';
 import FounderSection from '@/components/FounderSection';
 import TargetCursor from '@/components/ui/TargetCursor';
+import Navbar from '@/components/Navbar';
 
 const Home = () => {
   return (
     <div className='bg-[#D3D3D3]'>
-      <TargetCursor  spinDuration={2}  hideDefaultCursor={true}  parallaxOn={true} />
+      <TargetCursor spinDuration={2} hideDefaultCursor={true} parallaxOn={true} />
+      <Navbar />
       <Hero />
       <HeroMarquee />
       <Brand />
