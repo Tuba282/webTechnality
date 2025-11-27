@@ -1,202 +1,98 @@
 "use client";
 import { motion } from "framer-motion";
-import { useRef } from "react";
 
-const ServiceGallery = () => {
-    const scrollRef = useRef(null);
+const items = [
+    { id: "0", cover: "/services-img-(1).jpg", link: "#", img: "/services-img-(1).jpg", title: 'Web Design', desc: 'Modern and responsive web interfaces that captivate users. We create stunning websites that work seamlessly across all devices, ensuring your brand stands out in the digital landscape.', type: 'discount' },
+    { id: "2", cover: "/services-img-(1).webp", link: "#", img: "/services-img-(1).webp", title: 'UI/UX Design', desc: 'User-centered design approach that prioritizes experience. We craft intuitive interfaces that delight users and drive engagement through thoughtful design decisions.', type: 'sign' },
+    { id: "10", cover: "/services-img-(2).webp", link: "#", img: "/services-img-(2).webp", title: '24/7 Support', desc: 'Round-the-clock customer support and maintenance. We are always here to help you with any issues, updates, or questions to keep your digital presence running smoothly.', type: 'logo' },
+    { id: "3", cover: "/services-img-(2).jpg", link: "#", img: "/services-img-(2).jpg", title: 'Development', desc: 'Cutting-edge web development using the latest technologies. We build robust, scalable applications that perform flawlessly and exceed expectations.', type: 'app' },
+    { id: "4", cover: "/services-img-(2).webp", link: "#", img: "/services-img-(2).webp", title: 'Mobile Apps', desc: 'Native and hybrid mobile solutions for iOS and Android. We create powerful mobile experiences that keep users engaged and coming back.', type: 'pattern' },
+    { id: "5", cover: "/services-img-(3).webp", link: "#", img: "/services-img-(3).webp", title: 'E-Commerce', desc: 'Powerful online stores that drive sales and growth. From product catalogs to secure checkout, we build complete e-commerce solutions that convert visitors into customers.', type: 'billboard' },
+    { id: "1", cover: "/services-img-(1).png", link: "#", img: "/services-img-(1).png", title: 'Branding', desc: 'Unique brand identity solutions that tell your story. From logo design to complete brand guidelines, we help you create a memorable presence that resonates with your target audience.', type: 'font' },
+    { id: "6", cover: "/services-img-(4).webp", link: "#", img: "/services-img-(4).webp", title: 'Digital Marketing', desc: 'Strategic digital marketing campaigns that deliver results. We help you reach your audience through SEO, social media, content marketing, and paid advertising.', type: 'bottle' },
+    { id: "7", cover: "/services-img-(5).webp", link: "#", img: "/services-img-(5).webp", title: 'SEO Optimization', desc: 'Search engine optimization that boosts your visibility. We implement proven strategies to improve your rankings and drive organic traffic to your website.', type: 'bottle' },
+    { id: "8", cover: "/services-img-(6).webp", link: "#", img: "/services-img-(6).webp", title: 'Analytics & Insights', desc: 'Data-driven insights that inform better decisions. We track, analyze, and report on key metrics to help you understand your audience and optimize performance.', type: 'slogan' },
+    { id: "9", cover: "/services-img-(7).webp", link: "#", img: "/services-img-(7).webp", title: 'Tech Consulting', desc: 'Expert technology consulting for your business needs. We provide strategic guidance to help you leverage technology effectively and stay ahead of the competition.', type: 'logo' },
+];
 
-    return (
-        <section className="relative bg-gradient-to-b from-white to-gray-50 py-16 md:py-20 lg:py-24 overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
-                {/* Section Header */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                    className="text-center mb-12 md:mb-16"
-                >
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-                        Our Work Gallery
-                    </h2>
-                    <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
-                        Explore our portfolio of stunning designs and innovative solutions
-                    </p>
-                </motion.div>
-
-                {/* Horizontal Scroll Container */}
-                <div className="relative">
-                    {/* Gradient Overlays for visual effect */}
-                    <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
-                    <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
-
-                    {/* Scrollable Container */}
-                    <div
-                        ref={scrollRef}
-                        className="flex gap-6 overflow-x-auto pb-6 scrollbar-hide snap-x snap-mandatory scroll-smooth"
-                        style={{
-                            scrollbarWidth: 'none',
-                            msOverflowStyle: 'none',
-                        }}
-                    >
-                        {cards.map((card, index) => (
-                            <Card card={card} key={card.id} index={index} />
-                        ))}
-                    </div>
-                </div>
-
-                {/* Scroll Hint */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 0.5 }}
-                    viewport={{ once: true }}
-                    className="text-center mt-8"
-                >
-                    <p className="text-sm text-gray-500 flex items-center justify-center gap-2">
-                        <svg
-                            className="w-5 h-5 animate-bounce"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            />
-                        </svg>
-                        Scroll horizontally to explore more
-                    </p>
-                </motion.div>
-            </div>
-
-            {/* Custom scrollbar hide styles */}
-            <style jsx>{`
-                .scrollbar-hide::-webkit-scrollbar {
-                    display: none;
-                }
-            `}</style>
-        </section>
-    );
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1
+        }
+    }
 };
 
-const Card = ({ card, index }) => {
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5
+        }
+    }
+};
+
+const ServiceGallery = () => {
     return (
-        <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="group relative flex-shrink-0 w-[350px] h-[450px] md:w-[400px] md:h-[500px] overflow-hidden rounded-2xl bg-gray-200 shadow-lg hover:shadow-2xl transition-all duration-500 snap-center"
-        >
-            {/* Background Image */}
-            <div
-                style={{
-                    backgroundImage: `url(${card.url})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                }}
-                className="absolute inset-0 z-0 transition-transform duration-700 group-hover:scale-110"
-            />
+        <div className="flex flex-col justify-center items-center min-h-screen  p-20">
+            <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4 w-full max-w-[1550px]"
+                style={{ gridAutoRows: 'minmax(200px, auto)' }}
+            >
+                {items.map((item, idx) => (
+                    <motion.div
+                        key={idx}
+                        variants={itemVariants}
+                        className={`
+                            relative group flex flex-col justify-between rounded-xl overflow-hidden border border-white/10 bg-neutral-900/50 backdrop-blur-sm
+                            ${item.type === 'billboard' ? 'lg:col-span-2 lg:row-span-2' : ''}
+                            ${item.type === 'logo' ? 'lg:col-span-2' : ''}
+                            min-h-[200px]
+                        `}
+                    >
+                        <div className="relative w-full h-full transition-transform duration-500 group-hover:scale-105">
+                            {/* Cover Image (Visible initially) */}
+                            <img
+                                src={item.cover}
+                                alt={item.title}
+                                className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 group-hover:opacity-0"
+                            />
 
-            {/* Overlay Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-10 opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+                            {/* Hover Image (Visible on hover) */}
+                            <img
+                                src={item.img}
+                                alt={item.title}
+                                className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100"
+                            />
 
-            {/* Content */}
-            <div className="absolute inset-0 z-20 flex flex-col justify-end p-6 md:p-8">
-                <motion.div
-                    initial={{ y: 20, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ delay: 0.2 }}
-                    viewport={{ once: true }}
-                >
-                    <h3 className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-gray-100 transition-colors">
-                        {card.title}
-                    </h3>
-                    <p className="text-sm md:text-base text-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0">
-                        {card.description || "Explore this amazing design"}
-                    </p>
-                </motion.div>
+                            {/* Dark Overlay for text readability */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300" />
+                        </div>
 
-                {/* Decorative Element */}
-                <div className="absolute top-6 right-6 w-12 h-12 border-2 border-white/30 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110" />
-            </div>
-
-            {/* Hover Border Effect */}
-            <div className="absolute inset-0 border-4 border-transparent group-hover:border-white/20 rounded-2xl transition-all duration-500 z-30 pointer-events-none" />
-        </motion.div>
+                        <a href={item.link} className="absolute inset-0 z-10">
+                            <div className="absolute inset-0 flex flex-col justify-end p-6 opacity-100 transition-all duration-300">
+                                <h3 className="text-white text-xl md:text-2xl font-bold mb-2 transform translate-y-0 transition-transform duration-300 group-hover:-translate-y-1">
+                                    {item.title}
+                                </h3>
+                                <p className="text-gray-300 text-sm line-clamp-2 opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+                                    {item.desc}
+                                </p>
+                            </div>
+                        </a>
+                    </motion.div>
+                ))}
+            </motion.div>
+            
+        </div>
     );
 };
 
 export default ServiceGallery;
-
-const cards = [
-    {
-        url: "/services-img-(1).jpg",
-        title: "Web Design",
-        description: "Modern and responsive web interfaces",
-        id: 1,
-    },
-    {
-        url: "/services-img-(1).png",
-        title: "Branding",
-        description: "Unique brand identity solutions",
-        id: 2,
-    },
-    {
-        url: "/services-img-(1).webp",
-        title: "UI/UX Design",
-        description: "User-centered design approach",
-        id: 3,
-    },
-    {
-        url: "/services-img-(2).jpeg",
-        title: "Development",
-        description: "Cutting-edge web development",
-        id: 4,
-    },
-    {
-        url: "/services-img-(2).webp",
-        title: "Mobile Apps",
-        description: "Native and hybrid solutions",
-        id: 5,
-    },
-    {
-        url: "/services-img-(3).webp",
-        title: "E-Commerce",
-        description: "Powerful online stores",
-        id: 6,
-    },
-    {
-        url: "/services-img-(4).webp",
-        title: "Marketing",
-        description: "Digital marketing strategies",
-        id: 7,
-    },
-    {
-        url: "/services-img-(5).webp",
-        title: "SEO",
-        description: "Search engine optimization",
-        id: 8,
-    },
-    {
-        url: "/services-img-(6).webp",
-        title: "Analytics",
-        description: "Data-driven insights",
-        id: 9,
-    },
-    {
-        url: "/services-img-(7).webp",
-        title: "Consulting",
-        description: "Expert tech consulting",
-        id: 10,
-    },
-    {
-        url: "/services-img-(8).jpg",
-        title: "Support",
-        description: "24/7 customer support",
-        id: 11,
-    },
-];

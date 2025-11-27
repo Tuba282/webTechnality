@@ -4,14 +4,14 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ServiceHero from './ServiceHero';
 import ServiceCards from './ServiceCards';
-// import ServiceGallery from './ServiceGallery';
+import ServiceGallery from './ServiceGallery';
 
 const Service = () => {
     return (
         <>
             <Navbar />
             <ServiceHero />
-            {/* <ServiceGallery/> */}
+            <ServiceGallery />
             <ServiceCards />
             <Footer />
         </>
