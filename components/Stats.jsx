@@ -31,7 +31,7 @@ const Counter = ({ value, suffix }) => {
 
 export default function Stats({ data }) {
     return (
-        <section className="w-full py-32 bg-white border-b border-gray-100">
+        <section className="w-full py-32  border-b border-gray-100">
             <div className="mx-auto max-w-7xl px-6 flex flex-col items-center gap-20">
 
                 {/* Heading - CONSISTENT STYLE */}

@@ -55,7 +55,7 @@ export default function PortfolioGrid() {
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
     return (
-        <section className="w-full py-24 bg-white relative">
+        <section className="w-full py-24  relative">
 
             {/* Heading - PRESERVED AS REQUESTED */}
             <motion.div

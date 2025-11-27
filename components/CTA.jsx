@@ -19,7 +19,7 @@ export default function CTA({
     const [hovered, setHovered] = useState(false);
 
     return (
-        <section ref={ref} className="w-full py-32 relative overflow-hidden bg-white">
+        <section ref={ref} className="w-full py-32 relative overflow-hidden">
             {/* Subtle Background Elements */}
             <motion.div style={{ y }} className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-gray-100 rounded-full blur-[100px]" />
@@ -41,7 +41,7 @@ export default function CTA({
                     </div>
 
                     <h2 className="text-5xl md:text-7xl lg:text-8xl font-light text-gray-900 tracking-tighter mb-6">
-                        Let's build the <br />
+                        Let`s build the <br />
                         <span className="font-[Italic-Mulish] text-gray-400">Future</span>
                     </h2>
                     <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">

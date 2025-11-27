@@ -23,7 +23,7 @@ export default function FeaturedProject() {
     const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.1, 1, 1.1]);
 
     return (
-        <section ref={ref} className="w-full py-24 bg-white overflow-hidden">
+        <section ref={ref} className="w-full py-24 overflow-hidden">
 
             {/* Heading - CONSISTENT STYLE */}
             <motion.div

@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar'
 import AboutAbout from './AboutAbout'
 import FounderSection from '@/components/FounderSection'
 import Footer from '@/components/Footer'
+import AboutStats from './AboutStats'
 
 const About = () => {
   return (
@@ -28,6 +29,7 @@ const About = () => {
       <AboutHero />
       <AboutAbout/>
       <FounderSection/>
+      <AboutStats/>
       <Footer/>
       
     </div>

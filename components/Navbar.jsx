@@ -144,7 +144,7 @@ const Navbar = () => {
             <div className="w-full text-right">
               <ul className="navBar  overflow-hidden">
                 <li className="cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-extrabold tracking-tighter">
-                   <Link href="/home" className="transition">
+                   <Link href="/" className="transition">
                    Home
                   </Link>
                 </li>
