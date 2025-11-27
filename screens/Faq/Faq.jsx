@@ -74,7 +74,7 @@ const Faqs = () => {
             <div>
               <p className="font-[Charm-Regular] italic tracking-wide"> Get in Touch</p>
               <h2 className="lg:text-6xl text-2xl py-5 " data-aos="fade-right">Let’s <span className="text-gray-400">Start</span> a <br /> <span className="text-gray-400">Conversation</span></h2>
-              <p className="text-gray-600 text-[17px]">
+              <span className="text-gray-600 text-[17px]">
                 <BlurText
                   text="We’re here to help you create something amazing. Fill out the form and we’ll be in touch."
                   delay={50}
@@ -82,7 +82,7 @@ const Faqs = () => {
                   direction="bottom"
                   className=" sm:w-[400] text-sm sm:text-base md:text-lg text-gray-600 leading-tight tracking-wide font-light max-w-xl mt-6"
                 />
-              </p>
+              </span>
             </div>
             {/* Full Name */}
             <div className="py-2">
