@@ -1,12 +1,15 @@
 "use client";
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { GoArrowRight } from "react-icons/go";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiPlus } from "react-icons/fi";
 import ContactInfo from "@/components/ContactInfo";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import BlurText from "@/components/ui/BlurText";
 
 const Faqs = () => {
 
@@ -14,6 +17,10 @@ const Faqs = () => {
   const toggleFaq = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
+  useEffect(() => {
+    AOS.init({ duration: 1200, once: true });
+  }, []);
 
   const faqData = [
     {
@@ -63,12 +70,19 @@ const Faqs = () => {
 
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-start">
           {/* left Side: Form */}
-          <form className="md:w-1/2  lg:p-15 p-10 rounded-3xl space-y-6">
+          <form className="md:w-1/2  lg:p-15 p-10 rounded-3xl space-y-6" data-aos="fade-up-left" data-aos-duration="2000">
             <div>
               <p className="font-[Charm-Regular] italic tracking-wide"> Get in Touch</p>
-              <h2 className="lg:text-6xl text-2xl py-5 ">Let’s <span className="text-gray-400">Start</span> a <br /> <span className="text-gray-400">Conversation</span></h2>
+              <h2 className="lg:text-6xl text-2xl py-5 " data-aos="fade-right">Let’s <span className="text-gray-400">Start</span> a <br /> <span className="text-gray-400">Conversation</span></h2>
               <p className="text-gray-600 text-[17px]">
-                We’re here to help you create something amazing. Fill out the form and we’ll be in touch.</p>
+                <BlurText
+                  text="We’re here to help you create something amazing. Fill out the form and we’ll be in touch."
+                  delay={50}
+                  animateBy="words"
+                  direction="bottom"
+                  className=" sm:w-[400] text-sm sm:text-base md:text-lg text-gray-600 leading-tight tracking-wide font-light max-w-xl mt-6"
+                />
+              </p>
             </div>
             {/* Full Name */}
             <div className="py-2">
@@ -121,9 +135,9 @@ const Faqs = () => {
           </form>
 
           {/* right Side: Info */}
-          <div className="md:w-1/2 lg:mt-24 border-0 border-gray-400 lg:border-s-2 lg:ps-5 space-y-4">
+          <div className="md:w-1/2 lg:mt-24 border-0 border-gray-400 lg:border-s-2 lg:ps-5 space-y-4" data-aos="fade-up-right" data-aos-duration="2000">
             <div>
-              <h3 className="lg:text-6xl text-2xl py-5 lg:ps-5 ">Common <span className="text-gray-400">
+              <h3 className="lg:text-6xl text-2xl py-5 lg:ps-5 " data-aos="fade-left">Common <span className="text-gray-400">
                 Questions</span></h3>
             </div>
             <motion.div
@@ -135,7 +149,7 @@ const Faqs = () => {
               <div className="max-w-6xl mx-auto flex flex-col lg:px-10 md:px-10 sm:px-10 px-2 justify-around lg:flex-row lg:p-2 md:p-2 sm:p-2 p-0 lg:gap-25 gap-10">
 
                 <div className="lg:w-full md:w-[600px] sm:w-[400px] sx:w-[300px] mx-auto lg:p-2 md:p-2 sm:p-2 p-0">
-                  {/* Right: FAQ */}
+
                   <motion.div
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}

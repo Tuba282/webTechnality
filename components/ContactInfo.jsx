@@ -8,7 +8,7 @@ const ContactInfo = () => {
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
 
                 {/* Email */}
-                <div className="flex flex-row justify-center w-[300px] h-[70px] py-0 items-center rounded-xl gap-4 group  border border-[#00000052] p-2 transition duration-300  hover:bg-[#bfbfbf]">
+                <div className="flex flex-row justify-center w-[300px] h-[70px] py-0 items-center rounded-xl gap-4 group  border border-[#00000052] p-2 transition duration-300  hover:bg-[#bfbfbf]" data-aos="fade-up" data-aos-duration="800">
                     <div className="p-2 rounded-xl bg-gray-200">
                         <FiMail size={25} className="mx-auto  text-gray-400 group-hover:text-[#00000052] transition duration-300" />
                     </div>
@@ -19,7 +19,7 @@ const ContactInfo = () => {
                 </div>
 
                 {/* Phone */}
-                <div className="flex flex-row justify-center w-[300px] h-[70px] py-0 items-center rounded-xl gap-4 group  border border-[#00000052] p-2 transition duration-300  hover:bg-[#bfbfbf]">
+                <div className="flex flex-row justify-center w-[300px] h-[70px] py-0 items-center rounded-xl gap-4 group  border border-[#00000052] p-2 transition duration-300  hover:bg-[#bfbfbf]" data-aos="fade-up" data-aos-duration="1500">
                     <div className="p-2 rounded-xl bg-gray-200">
                         <FiPhone size={25} className="mx-auto  text-gray-400 group-hover:text-[#00000052] transition duration-300" />
                     </div>
@@ -30,7 +30,7 @@ const ContactInfo = () => {
                 </div>
 
                 {/* Address */}
-                <div className="flex flex-row justify-center w-[300px] h-[70px] py-0 items-center rounded-xl gap-4 group  border border-[#00000052] p-2 transition duration-300  hover:bg-[#bfbfbf]">
+                <div className="flex flex-row justify-center w-[300px] h-[70px] py-0 items-center rounded-xl gap-4 group  border border-[#00000052] p-2 transition duration-300  hover:bg-[#bfbfbf]" data-aos="fade-up" data-aos-duration="2000">
                     <div className="p-2 rounded-xl bg-gray-200">
                         <FiMapPin size={25} className="mx-auto  text-gray-400 group-hover:text-[#00000052] transition duration-300" />
                     </div>
