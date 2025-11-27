@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import RotatingLogo from '@/components/RotatingLogo';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Diagonal2D from '@/components/Diagnol2D';
 
 const Contact = () => {
   return (
@@ -29,7 +30,7 @@ const Contact = () => {
           </div>
 
           {/* Right Side: Form */}
-          <form className="md:w-1/2 bg-white shadow-2xl lg:p-15 p-10 rounded-3xl space-y-6">
+          <form className="md:w-1/2 bg-white shadow-2xl z-5 lg:p-15 p-10 rounded-3xl space-y-6">
             {/* Full Name */}
             <div>
               <label htmlFor="name" className="block text-sm font-medium">Full Name*</label>
@@ -126,6 +127,7 @@ const Contact = () => {
             </p>
           </form>
         </div>
+        <Diagonal2D />
       </section>
       <Footer />
     </>

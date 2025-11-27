@@ -176,7 +176,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-extrabold tracking-tighter">
-                   <Link href="/faqs" className="transition">
+                   <Link href="/faq" className="transition">
                    FAQs&nbsp;&nbsp;
                   </Link>
                 </li>
