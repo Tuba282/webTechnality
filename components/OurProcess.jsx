@@ -155,7 +155,7 @@ export default function OurProcess() {
                                 className="font-medium leading-relaxed text-gray-800"
                             />
 
-                               
+
                             <p className=" text-gray-400 text-4xl">❞</p>
                         </div>
 
@@ -188,14 +188,14 @@ export default function OurProcess() {
                         <div className="h-[130px] hidden lg:block "></div>
 
                         <div className="flex flex-row lg:w-[80%] w-[85%]  gap-6">
-                           <BlurText
+                            <BlurText
                                 text=" WebTechnality brings clarity to chaos. His design work is not only beautiful but deeply strategic. He helped us rebrand from the ground up, and our audience response has been perfect."
                                 delay={100}
                                 animateBy="words"
                                 direction="bottom"
                                 className="font-medium leading-relaxed text-gray-800"
                             />
-                           
+
                             <p className=" text-gray-400 text-4xl">❞</p>
                         </div>
 
@@ -216,6 +216,6 @@ export default function OurProcess() {
                     </motion.div>
                 </div>
             </section>
-        </div>
+        </div >
     );
 }

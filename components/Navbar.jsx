@@ -1,124 +1,192 @@
-"use client"
-import React, { useState, useEffect } from 'react'
+"use client";
+import React, { useState, useEffect } from "react";
 import { LuAlignCenter } from "react-icons/lu";
-import gsap from "gsap"
-import { motion } from "motion/react"
+import gsap from "gsap";
+import { FiMail, FiInstagram, FiLinkedin, FiUser } from "react-icons/fi";
+import { motion, AnimatePresence } from "framer-motion";
 import { IoClose } from "react-icons/io5";
- 
-export const Navbar = () => {
-  const [bar, setBar] = useState(false)
-  const timeline = gsap.timeline();
-  const handleBar = () => {
-    setBar(!bar)
-  }
+import Link from "next/link";
+import MegaMenuServices from "./MegaMenuServices"; // <-- import your MegaMenu
 
+const Navbar = () => {
+  const [bar, setBar] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+  const timelineRef = React.useRef(null);
+
+  // mega menu state
+  const [showMega, setShowMega] = useState(false);
+  const showMegaMenu = () => setShowMega(true);
+  const hideMegaMenu = () => setShowMega(false);
+
+  const handleBar = () => setBar(!bar);
+
+  const handleClose = () => {
+    setIsClosing(true);
+    if (timelineRef.current) {
+      timelineRef.current.reverse();
+    }
+    setTimeout(() => {
+      setBar(false);
+      setIsClosing(false);
+    }, 800);
+  };
 
   useEffect(() => {
+    if (bar) {
+      timelineRef.current = gsap.timeline();
+      timelineRef.current.to("#full", { duration: 0.5, top: 0 });
+      timelineRef.current.from(".navBar li", { x: -100, duration: 0.5, stagger: 0.2, opacity: 0 }, 0);
+    }
+  }, [bar]);
 
-    timeline.to("#full", {
-      duration: 0.5,
-      top: 0,
-    });
-    timeline.from(".navBar li", {
-      x: -100,
-      duration: 0.5,
-      stagger: 0.2,
-      opacity: 0,
-    });
-  }, [timeline])
+  const iconVariants = {
+    hidden: { x: 12, opacity: 0, scale: 0.9 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.35, ease: "easeOut" },
+    },
+  };
+
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.18,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
   return (
-    <div className='relative'>
-      <div className='w-full flex justify-center items-start lg:justify-between py-4 px-2 z-5'>
-        <div className="logo w-[60%] flex justify-center lg:justify-between items-center">
-          
-          <img src="./wordLogo-white.jpeg" width="106" height="83" /> 
+    <div className="relative">
+      {/* Top bar */}
+      <div className="w-full mx-auto max-w-7xl flex justify-between gap-4 items-center py-4 px-4 sm:px-6 z-5">
+        {/* Logo */}
+        <div className="logo">
+          <img src="/logoBlackAsset2.png" alt="Logo" className="w-[200px] lg:w-[300px]" />
         </div>
-        <div className="w-[50%] flex justify-between items-center py-2">
-          <ul type="none" className="flex justify-between items-center gap-15">
-            <li className='uppercase mx-2 tracking-tight text-sm font-[Helvetica] hidden xl:block'>Shop</li>
-            <li className='uppercase mx-2 tracking-tight text-sm font-[Helvetica] hidden xl:block'>WHOLESALE</li>
-            <li className='uppercase mx-2 tracking-tight text-sm font-[Helvetica] hidden xl:block'>Catering</li>
-            <li className='uppercase mx-2 tracking-tight text-sm font-[Helvetica] hidden xl:block'>Donate</li>
-            <LuAlignCenter onClick={handleBar} />
-          </ul>
+
+        {/* Hamburger Bar */}
+        <div className="flex items-center">
+          <LuAlignCenter
+            onClick={handleBar}
+            className="text-2xl cursor-pointer hover:opacity-75 transition-opacity"
+          />
         </div>
       </div>
-      {
-        bar && (
-          <div id="full" className={`absolute -top-[530%] left-0 w-[100%] min-h-[96vh] z-9 rounded-b-3xl bg-black text-white p-4`}>
-            <div className='flex justify-between items-start py-4 px-4 '>
-              <div className="logo w-[60%] ">
-                <img src="./wordLogo-black.png" width="106" height="83" />
-              </div>
-              <div className="w-[50%] flex justify-between items-center py-2">
-                <ul type="none" className="flex justify-between items-center gap-15">
-                  <li className='uppercase mx-2 tracking-tight text-sm font-[Helvetica] hidden xl:block'>Shop</li>
-                  <li className='uppercase mx-2 tracking-tight text-sm font-[Helvetica] hidden xl:block'>WHOLESALE</li>
-                  <li className='uppercase mx-2 tracking-tight text-sm font-[Helvetica] hidden xl:block'>Catering</li>
-                  <li className='uppercase mx-2 tracking-tight text-sm font-[Helvetica] hidden xl:block'>Donate</li>
-                  <IoClose className='text-xl' id='close' onClick={() => { timeline.reverse() }} />
-                  
-                </ul>
-              </div>
-            </div>
-            <div className='w-full min-h-[20vh]  flex justify-between items-end'>
-              <div className='w-[60%] justify-between hidden xl:flex lg:flex '>
-                <motion.ul className='hidden xl:block'
-                  initial={{ x: 500 }}
-                  animate={{ x: 0 }}
-                  transition={{
-                    duration: 1,
-                    ease: "easeOut"
-                  }}>
-                  <h3 className='my-3 text-xl uppercase'>Conatct with us</h3>
-                  <li className='text-sm hover:text-slate-400 transition-all '>Facebook</li>
-                  <li className='text-sm hover:text-slate-400 transition-all text-purple-300 underline'>Instagram</li>
-                  <li className='text-sm hover:text-slate-400 transition-all '>Twitter</li>
-                  <li className='text-sm hover:text-slate-400 transition-all '>Linkedin</li>
-                  <li className='text-sm hover:text-slate-400 transition-all '>YouTube</li>
-                </motion.ul>
-                <motion.ul className='hidden xl:block'
-                  initial={{ x: 500 }}
-                  animate={{ x: 0 }}
-                  transition={{
-                    duration: 1.5,
-                    ease: "easeOut"
-                  }}>
-                  <h3 className='my-4 text-xl uppercase'>nitty gritties</h3>
-                  <li className='text-sm hover:text-slate-400 transition-all '>Good Things FAQs</li>
-                  <li className='text-sm hover:text-slate-400 transition-all '>Good Food FAQs</li>
-                  <li className='text-sm hover:text-slate-400 transition-all '>Good Places</li>
-                </motion.ul>
-                <motion.ul className='hidden xl:block'
-                  initial={{ x: 500 }}
-                  animate={{ x: 0 }}
-                  transition={{
-                    duration: 2,
-                    ease: "easeOut"
-                  }}>
-                  <h3 className='my-4 text-xl uppercase'>Get started</h3>
-                  <li className='text-sm hover:text-slate-400 transition-all '>Pathways</li>
-                  <li className='text-sm hover:text-slate-400 transition-all '>Careers</li>
-                </motion.ul>
-              </div>
-              <div className='w-[100%] md:w-[40%] text-right '>
-                <ul className='navBar overflow-hidden'>
-                  <li className='uppercase cursor-pointer hover:text-slate-400 text-3xl xl:text-6xl my-1 font-extrabold font-[Helvetica] tracking-tighter'>shop</li>
-                  <li className='uppercase cursor-pointer hover:text-slate-400 text-3xl xl:text-6xl my-1 font-extrabold font-[Helvetica] tracking-tighter'>WHOLESALE</li>
-                  <li className='uppercase cursor-pointer hover:text-slate-400 text-3xl xl:text-6xl my-1 font-extrabold font-[Helvetica] tracking-tighter'>Catering</li>
-                  <li className='uppercase cursor-pointer hover:text-slate-400 text-3xl xl:text-6xl my-1 font-extrabold font-[Helvetica] tracking-tighter'>Impact</li>
-                  <li className='uppercase cursor-pointer hover:text-slate-400 text-3xl xl:text-6xl my-1 font-extrabold font-[Helvetica] tracking-tighter'>Stories</li>
-                  <li className='uppercase cursor-pointer hover:text-slate-400 text-3xl xl:text-6xl my-1 font-extrabold font-[Helvetica] tracking-tighter'>About</li>
-                  <li className='uppercase cursor-pointer hover:text-slate-400 text-3xl xl:text-6xl my-1 font-extrabold font-[Helvetica] tracking-tighter'>Contact</li>
-                  <li className='uppercase cursor-pointer hover:text-slate-400 text-3xl xl:text-6xl my-1 font-extrabold font-[Helvetica] tracking-tighter'>Donate</li>
-                </ul>
-              </div>
 
+      {/* Fullscreen Menu */}
+      {bar && (
+
+        <motion.div
+          id="full"
+          className="fixed -top-full left-0 w-full h-screen z-50 rounded-b-3xl bg-black text-white p-6 overflow-y-auto"
+          initial={{ top: "-100%" }}
+          animate={isClosing ? { top: "-100%" } : { top: 0 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+        >
+
+
+          <AnimatePresence>
+            {showMega && (
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="absolute top-20 left-0 bg-gray-100 rounded-4xl p-5  z-[999]"
+                onMouseEnter={showMegaMenu}
+                onMouseLeave={hideMegaMenu}
+              >
+                <MegaMenuServices />
+              </motion.div>
+            )}
+          </AnimatePresence>
+          
+            {/* Header inside menu */}
+          <div className="flex justify-between gap-3 items-start py-4 px-2 sm:px-4 mb-8">
+            <div className="logo">
+              <img src="/logowhiteAsset1.png" alt="Logo" className="w-[250px] lg:w-[300px]" />
+            </div>
+            <IoClose
+              className="text-3xl cursor-pointer hover:opacity-75 transition-opacity"
+              onClick={handleClose}
+            />
+          </div>
+
+          {/* Content */}
+          <div className="w-full min-h-[70vh] flex justify-end items-end">
+            {/* Social icons */}
+            <div className="w-[60%] justify-between hidden xl:flex lg:flex">
+              <motion.div
+                className="flex gap-3 sm:gap-4"
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                {[FiMail, FiUser, FiLinkedin, FiInstagram].map((IconComp, idx) => (
+                  <motion.div
+                    key={idx}
+                    variants={iconVariants}
+                    className="w-10 h-10 border rounded-full flex items-center justify-center 
+                      border-white text-white transition-all duration-300 cursor-pointer 
+                      hover:border-gray-300 hover:text-[#e4e1e19a]"
+                  >
+                    <IconComp size={18} />
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
+
+            {/* Nav links */}
+            <div className="w-full text-right">
+              <ul className="navBar  overflow-hidden">
+                <li className="cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-extrabold tracking-tighter">
+                   <Link href="/home" className="transition">
+                   Home
+                  </Link>
+                </li>
+                <li className="cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-extrabold tracking-tighter">
+                   <Link href="/about" className="transition">
+                   About
+                  </Link>
+                </li>
+
+                {/* SERVICES with hover mega menu */}
+                <li
+                  className="relative group cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-extrabold tracking-tighter"
+                  onMouseEnter={showMegaMenu}
+                  onMouseLeave={hideMegaMenu}
+                >
+                  <Link href="/services" className="transition">
+                    Services
+                  </Link>
+                </li>
+
+                <li className="cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-extrabold tracking-tighter">
+                   <Link href="/portfolio" className="transition">
+                   Portfolio
+                  </Link>
+                </li>
+                <li className="cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-extrabold tracking-tighter">
+                   <Link href="/contact" className="transition">
+                   Contact Us
+                  </Link>
+                </li>
+                <li className="cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-extrabold tracking-tighter">
+                   <Link href="/faqs" className="transition">
+                   FAQs
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
-        )
-      }
+        </motion.div>
+      )}
     </div>
-  )
-}
- 
+  );
+};
+
+export default Navbar;

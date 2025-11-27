@@ -40,7 +40,7 @@ export default function ProjectsSection() {
                     className="fixed z-[100] pointer-events-none w-24 h-24 rounded-full bg-black/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white text-xs"
                     style={{ left: cursor.x - 50, top: cursor.y - 50 }}
                 >
-                    <ArrowRight  className="text-md text-white/60"/>
+                    <ArrowRight className="text-md text-white/60" />
                 </motion.div>
             )}
 
@@ -55,7 +55,7 @@ export default function ProjectsSection() {
             </div>
 
             {/* Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-10 px-2 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-10 max-w-6xl mx-auto">
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}

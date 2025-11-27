@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useRef, useCallback, useMemo } from 'react';
+import { useEffect, useRef, useCallback, useState ,useMemo} from 'react';
 import { gsap } from 'gsap';
 
 const TargetCursor = ({
@@ -19,19 +19,30 @@ const TargetCursor = ({
   const tickerFnRef = useRef(null);
   const activeStrengthRef = useRef(0);
 
-  const isMobile = useMemo(() => {
-    const hasTouchScreen = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-    const isSmallScreen = window.innerWidth <= 768;
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    const mobileRegex = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i;
-    const isMobileUserAgent = mobileRegex.test(userAgent.toLowerCase());
-    return (hasTouchScreen && isSmallScreen) || isMobileUserAgent;
+  // determine mobile only on the client to avoid SSR window access
+  const [isMobile, setIsMobile] = useState(true);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    try {
+      const hasTouchScreen = 'ontouchstart' in window || (navigator && navigator.maxTouchPoints > 0);
+      const isSmallScreen = window.innerWidth <= 768;
+      const userAgent = (navigator && (navigator.userAgent || navigator.vendor || window.opera)) || '';
+      const mobileRegex = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i;
+      const isMobileUserAgent = mobileRegex.test(userAgent.toLowerCase());
+      setIsMobile((hasTouchScreen && isSmallScreen) || isMobileUserAgent);
+    } catch (e) {
+      setIsMobile(false);
+    }
   }, []);
 
-  const constants = useMemo(() => ({
-    borderWidth: 3,
-    cornerSize: 12
-  }), []);
+  const constants = useMemo(
+    () => ({
+      borderWidth: 3,
+      cornerSize: 12
+    }),
+    []
+  );
 
   const moveCursor = useCallback((x, y) => {
     if (!cursorRef.current) return;
@@ -232,12 +243,16 @@ const TargetCursor = ({
           ];
           const tl = gsap.timeline();
           corners.forEach((corner, index) => {
-            tl.to(corner, {
-              x: positions[index].x,
-              y: positions[index].y,
-              duration: 0.3,
-              ease: 'power3.out'
-            }, 0);
+            tl.to(
+              corner,
+              {
+                x: positions[index].x,
+                y: positions[index].y,
+                duration: 0.3,
+                ease: 'power3.out'
+              },
+              0
+            );
           });
         }
 
@@ -248,10 +263,7 @@ const TargetCursor = ({
             spinTl.current.kill();
             spinTl.current = gsap
               .timeline({ repeat: -1 })
-              .to(
-              cursorRef.current,
-              { rotation: '+=360', duration: spinDuration, ease: 'none' }
-            );
+              .to(cursorRef.current, { rotation: '+=360', duration: spinDuration, ease: 'none' });
             gsap.to(cursorRef.current, {
               rotation: normalizedRotation + 360,
               duration: spinDuration * (1 - normalizedRotation / 360),
@@ -303,10 +315,7 @@ const TargetCursor = ({
       spinTl.current.kill();
       spinTl.current = gsap
         .timeline({ repeat: -1 })
-        .to(
-        cursorRef.current,
-        { rotation: '+=360', duration: spinDuration, ease: 'none' }
-      );
+        .to(cursorRef.current, { rotation: '+=360', duration: spinDuration, ease: 'none' });
     }
   }, [spinDuration, isMobile]);
 
@@ -315,12 +324,12 @@ const TargetCursor = ({
   }
 
   return (
-    <div ref={cursorRef}   className=" target-cursor-wrapper">
-      <div ref={dotRef}   className=" target-cursor-dot" />
-      <div   className=" target-cursor-corner corner-tl" />
-      <div   className=" target-cursor-corner corner-tr" />
-      <div   className=" target-cursor-corner corner-br" />
-      <div   className=" target-cursor-corner corner-bl" />
+    <div ref={cursorRef} className="target-cursor-wrapper">
+      <div ref={dotRef} className="target-cursor-dot" />
+      <div className="target-cursor-corner corner-tl" />
+      <div className="target-cursor-corner corner-tr" />
+      <div className="target-cursor-corner corner-br" />
+      <div className="target-cursor-corner corner-bl" />
     </div>
   );
 };

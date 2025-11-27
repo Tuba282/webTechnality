@@ -86,9 +86,9 @@ export const Faq = () => {
                                         className="w-10 h-10 sm:w-12 sm:h-12 rounded-full"
                                     />
                                 </div>
-                                <div   className="cursor-target flex flex-col text-sm">
-                                    <span   className=" font-semibold text-gray-900">Have more questions?</span>
-                                    <span   className=" font-semibold text-gray-900">Book a free discovery call</span>
+                                <div className="cursor-target flex flex-col text-sm">
+                                    <span className=" font-semibold text-gray-900">Have more questions?</span>
+                                    <span className=" font-semibold text-gray-900">Book a free discovery call</span>
                                 </div>
                             </div>
 
@@ -97,7 +97,7 @@ export const Faq = () => {
                                 initial={{ opacity: 0, y: 40 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 1, delay: 0.5 }}
-                                  className=" bg-white rounded-full overflow-hidden"
+                                className=" bg-white rounded-full overflow-hidden"
                             >
                                 <button className="cursor-target w-full flex items-center justify-center gap-3 bg-black text-white px-4 py-3 rounded-full shadow-lg active:scale-95 transition">
                                     <img
@@ -113,7 +113,7 @@ export const Faq = () => {
                             {/* Email */}
                             <p className="text-center text-sm sm:text-base italic tracking-wide text-[#8e8e8e]">
                                 Or, email me at{" "}
-                                <a href="mailto:hello@denqid.com"   className=" text-black hover:underline">
+                                <a href="mailto:hello@denqid.com" className=" text-black hover:underline">
                                     hello@WebTechnality.com
                                 </a>
                             </p>

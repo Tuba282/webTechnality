@@ -10,18 +10,21 @@ import Services from '@/screens/Services/Services';
 import OurProcess from '@/components/OurProcess';
 import FounderSection from '@/components/FounderSection';
 import TargetCursor from '@/components/ui/TargetCursor';
+import ProjectsSection from '@/components/ProjectsSection';
 import Navbar from '@/components/Navbar';
+import MegaMenuServices from '@/components/MegaMenuServices';
 
 const Home = () => {
   return (
     <div className='bg-[#D3D3D3]'>
       <TargetCursor spinDuration={2} hideDefaultCursor={true} parallaxOn={true} />
-      <Navbar />
+      <Navbar /> 
       <Hero />
       <HeroMarquee />
       <Brand />
       <OurProcess />
       <Services />
+      <ProjectsSection />
       <FounderSection />
       <PricingCard />
       <FeatureGrid />
