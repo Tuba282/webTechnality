@@ -26,7 +26,9 @@ const BlurText = ({
   onAnimationComplete,
   stepDuration = 0.35
 }) => {
-  const elements = animateBy === 'words' ? text.split(' ') : text.split('');
+  // Ensure text is a string
+  const textString = String(text || '');
+  const elements = animateBy === 'words' ? textString.split(' ') : textString.split('');
   const [inView, setInView] = useState(false);
   const ref = useRef(null);
 
@@ -43,7 +45,6 @@ const BlurText = ({
     );
     observer.observe(ref.current);
     return () => observer.disconnect();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [threshold, rootMargin]);
 
   const defaultFrom = useMemo(
@@ -85,7 +86,7 @@ const BlurText = ({
 
         return (
           <motion.span
-              className=" inline-block will-change-[transform,filter,opacity]"
+            className="inline-block will-change-[transform,filter,opacity]"
             key={index}
             initial={fromSnapshot}
             animate={inView ? animateKeyframes : fromSnapshot}

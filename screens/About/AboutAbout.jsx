@@ -124,13 +124,9 @@ export default function AboutAbout() {
 
                         </div>
                         <div className="relative w-full lg:w-1/2 flex flex-col items-start">
-                            <BlurText
-                                text={card.title}
-                                delay={50}
-                                animateBy="words"
-                                direction="top"
-                                className="text-3xl lg:text-5xl font-normal  mb-3"
-                            />
+                            <h3 className="text-3xl lg:text-5xl font-normal  mb-3">
+                                {card.title}
+                            </h3>
                             {
                                 idx === 1 && (
                                     <motion.img
@@ -151,8 +147,6 @@ export default function AboutAbout() {
                                 direction="bottom"
                                 className=" text-sm sm:text-base md:text-lg text-gray-600 tracking-wide  font-light mt-6"
                             />
-
-
 
                         </div>
                     </div>
