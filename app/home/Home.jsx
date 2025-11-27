@@ -6,7 +6,7 @@ import React from 'react'
 import PricingCard from '@/components/PricingCard';
 import FeatureGrid from '@/components/FeatureGrid';
 import { Faq } from '@/components/Faq';
-import Services from '@/screens/Services/Services';
+import Services from '@/components/HomeServices';
 import OurProcess from '@/components/OurProcess';
 import TargetCursor from '@/components/ui/TargetCursor';
 import ProjectsSection from '@/components/ProjectsSection';
@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <div className='bg-[#D3D3D3]'>
       <TargetCursor spinDuration={2} hideDefaultCursor={true} parallaxOn={true} />
-      <Navbar /> 
+      <Navbar />
       <Hero />
       <HeroMarquee />
       <Brand />

@@ -1,11 +1,12 @@
-import Services from '@/screens/Services/Services'
+
+import Service from '@/screens/Services/Service'
 import React from 'react'
 
 
 const ServicesPage = () => {
   return (
     <div className='w-full'>
-      <Services/>
+      <Service/>
     </div>
   )
 }
