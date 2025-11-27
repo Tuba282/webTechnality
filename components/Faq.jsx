@@ -113,8 +113,8 @@ export const Faq = () => {
                             {/* Email */}
                             <p className="text-center text-sm sm:text-base italic tracking-wide text-[#8e8e8e]">
                                 Or, email me at{" "}
-                                <a href="mailto:hello@denqid.com" className=" text-black hover:underline">
-                                    hello@WebTechnality.com
+                                <a href="mailto:info@WebTechnality.com" className=" text-black hover:underline">
+                                    info@WebTechnality.com
                                 </a>
                             </p>
                         </div>

@@ -144,13 +144,13 @@ const Navbar = () => {
             <div className="w-full text-right">
               <ul className="navBar  overflow-hidden">
                 <li className="cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-extrabold tracking-tighter">
-                   <Link href="/home" className="transition">
-                   Home
+                   <Link href="/" className="transition">
+                   Home&nbsp;&nbsp;
                   </Link>
                 </li>
                 <li className="cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-extrabold tracking-tighter">
                    <Link href="/about" className="transition">
-                   About
+                   About&nbsp;&nbsp;
                   </Link>
                 </li>
 
@@ -161,23 +161,23 @@ const Navbar = () => {
                   onMouseLeave={hideMegaMenu}
                 >
                   <Link href="/services" className="transition">
-                    Services
+                    Services&nbsp;&nbsp;
                   </Link>
                 </li>
 
                 <li className="cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-extrabold tracking-tighter">
                    <Link href="/portfolio" className="transition">
-                   Portfolio
+                   Portfolio&nbsp;&nbsp;
                   </Link>
                 </li>
                 <li className="cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-extrabold tracking-tighter">
                    <Link href="/contact" className="transition">
-                   Contact Us
+                   Contact Us&nbsp;&nbsp;
                   </Link>
                 </li>
                 <li className="cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-extrabold tracking-tighter">
                    <Link href="/faqs" className="transition">
-                   FAQs
+                   FAQs&nbsp;&nbsp;
                   </Link>
                 </li>
               </ul>
