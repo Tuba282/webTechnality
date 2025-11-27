@@ -123,12 +123,11 @@ const Navbar = () => {
               </div>
               <div className='w-full text-right'>
                 <ul className='navBar overflow-hidden'>
-                  <li className='uppercas cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-light tracking-tighter'>Our Process</li>
-                  <li className='uppercas cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-light tracking-tighter'>Case Studies</li>
-                  <li className='uppercas cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-light tracking-tighter'>Services</li>
-                  <li className='uppercas cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-light tracking-tighter'>Brand</li>
-                  <li className='uppercas cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-light tracking-tighter'>Pricing</li>
-                  <li className='uppercas cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-light tracking-tighter'>FAQs</li>
+                  <li className='uppercas cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 tracking-tighter font-extrabold'>Home</li>
+                  <li className='uppercas cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 tracking-tighter font-extrabold'>About</li>
+                  <li className='uppercas cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 tracking-tighter font-extrabold'>Services</li>
+                  <li className='uppercas cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 tracking-tighter font-extrabold'>Portfolio</li>
+                  <li className='uppercas cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 tracking-tighter font-extrabold'>FAQs</li>
                 </ul>
               </div>
             </div>

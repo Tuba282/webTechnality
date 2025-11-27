@@ -47,7 +47,7 @@ export default function DiagonalText(className) {
           ...row1, ...row2,...row1, ...row2,...row1, ...row2,...row1, ...row2,...row1, ...row2].map((item, i) => (
             <p
               key={i}
-                className=" text-[70px] drop-shadow-xs drop-shadow-black sm:text-[80px] md:text-[110px] font-extrabold mx-10"
+                className=" text-[70px] drop-shadow-xs drop-shadow-black sm:text-[80px] md:text-[140px] font-extrabold mx-10"
             >
               {item}
             </p>

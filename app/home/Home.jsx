@@ -8,7 +8,6 @@ import FeatureGrid from '@/components/FeatureGrid';
 import { Faq } from '@/components/Faq';
 import Services from '@/screens/Services/Services';
 import OurProcess from '@/components/OurProcess';
-import FounderSection from '@/components/FounderSection';
 import TargetCursor from '@/components/ui/TargetCursor';
 import ProjectsSection from '@/components/ProjectsSection';
 import Navbar from '@/components/Navbar';
@@ -24,7 +23,6 @@ const Home = () => {
       <OurProcess />
       <Services />
       <ProjectsSection />
-      <FounderSection />
       <PricingCard />
       <FeatureGrid />
       <Faq />
