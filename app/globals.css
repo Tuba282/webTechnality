@@ -216,3 +216,8 @@ body {
   border-right: none;
   border-top: none;
 }
+
+/* .///////////////////////////////////////////// */
+.but{
+  width: fit-content !important;
+}
