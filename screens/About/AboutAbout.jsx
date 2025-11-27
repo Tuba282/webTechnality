@@ -3,6 +3,8 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import DiagonalText from "@/components/DiagonalScroller";
 import Diagonal2D from '@/components/Diagnol2D';
+import CircularText from '@/components/ui/CircularText';
+import BlurText from '@/components/ui/BlurText';
 
 const cards = [
     {
@@ -86,24 +88,45 @@ export default function AboutAbout() {
                             } items-center gap-8 lg:gap-16`}
                     >
                         {/* Image Section */}
-                        <div className="relative w-full lg:w-1/2">
+                        <div className="relative w-full lg:w-1/2 ">
                             <img
                                 src={card.img}
                                 alt="main"
                                 className="rounded-lg w-full! h-[400px]! lg:h-[650px]! object-cover shadow"
                             />
                             {/* Rotating Circle */}
-                            <img
+                            {/* <img
                                 src={card.circleImg}
                                 alt="circle"
                                 className="drop-shadow-xs drop-shadow-white absolute -top-14 -left-14 w-24 h-24! lg:w-40! lg:h-40! animate-spin pointer-events-none select-none"
                                 style={{ animationDuration: "6s" }}
-                            />
+                            /> */}
+                            {
+                                idx === 0 && (
+                                    <CircularText
+                                        text="Web --- Technality  ---- "
+                                        onHover="speedUp"
+                                        spinDuration={20}
+                                        className="drop-shadow-xs drop-shadow-black absolute! -top-20! -left-15!"
+                                    />
+                                )
+                            }
+                            {
+                                idx === 1 && (
+                                    <CircularText
+                                        text="Web --- Technality  ---- "
+                                        onHover="speedUp"
+                                        spinDuration={20}
+                                        className="drop-shadow-xs drop-shadow-black absolute! -top-20! -left-15!"
+                                    />
+                                )
+                            }
+
                         </div>
                         <div className="relative w-full lg:w-1/2 flex flex-col items-start">
-                            <h2 className="text-3xl lg:text-5xl font-normal  mb-3">
+                            <h3 className="text-3xl lg:text-5xl font-normal  mb-3">
                                 {card.title}
-                            </h2>
+                            </h3>
                             {
                                 idx === 1 && (
                                     <motion.img
@@ -117,8 +140,13 @@ export default function AboutAbout() {
                                     />
                                 )
                             }
-                            <p className=" text-sm sm:text-base md:text-lg text-gray-600 tracking-wide  font-light mt-6">{card.desc}</p>
-
+                            <BlurText
+                                text={card.desc}
+                                delay={50}
+                                animateBy="words"
+                                direction="bottom"
+                                className=" text-sm sm:text-base md:text-lg text-gray-600 tracking-wide  font-light mt-6"
+                            />
 
                         </div>
                     </div>
