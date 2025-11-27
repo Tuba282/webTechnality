@@ -1,12 +1,21 @@
 "use client";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import BlurText from '@/components/ui/BlurText';
 import React from 'react';
 import { GoArrowRight } from 'react-icons/go';
 import { motion } from "framer-motion";
 import RotatingLogo from '@/components/RotatingLogo';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Diagonal2D from '@/components/Diagnol2D';
+import { useEffect } from 'react';
 
 const Contact = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1200, once: true });
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -17,11 +26,17 @@ const Contact = () => {
           <div className="md:w-1/2 space-y-4">
             {/* Image rotated 180deg */}
             <RotatingLogo />
-            <h2 className="lg:text-8xl md:text-3xl mb-5 text-[30px] font-medium">
+            <h2 className="lg:text-8xl md:text-3xl mb-5 text-[30px] font-medium"  data-aos="fade-right">
               Have A New Or Existing Idea You <span className='text-gray-500'>Need Help</span> With?
             </h2>
             <p className="text-base text-[19px]">
-              Message us using the contact form or email at &nbsp; <br />
+              <BlurText
+                text="  Message us using the contact form or email at "
+                delay={50}
+                animateBy="words"
+                direction="bottom"
+                className=" sm:w-[400] text-sm sm:text-base md:text-lg text-gray-600 leading-tight tracking-wide font-light max-w-xl mt-6"
+              />
               <a href="mailto:info@WebTechnality.com" className="text-gray-600 underline">
                 info@WebTechnality.com
               </a>
@@ -29,7 +44,7 @@ const Contact = () => {
           </div>
 
           {/* Right Side: Form */}
-          <form className="md:w-1/2 bg-white shadow-2xl lg:p-15 p-10 rounded-3xl space-y-6">
+          <form className="md:w-1/2 bg-white shadow-2xl z-5 lg:p-15 p-10 rounded-3xl space-y-6" data-aos="fade-right">
             {/* Full Name */}
             <div>
               <label htmlFor="name" className="block text-sm font-medium">Full Name*</label>
@@ -81,23 +96,37 @@ const Contact = () => {
 
             {/* Checkboxes */}
             <div className="space-y-4 text-sm">
-              <label className="flex items-start gap-2">
+              <label className="flex flex-row  items-center gap-2">
                 <input
                   type="checkbox"
                   required
                   className="mt-1 accent-gray-500"
                 />
-                <span>I agree to the Privacy Policy and Terms & Conditions.</span>
+                <span>
+                  <BlurText
+                    text="I agree to the Privacy Policy and Terms & Conditions."
+                    delay={50}
+                    animateBy="words"
+                    direction="bottom"
+                    className="  text-gray-600 leading-tight tracking-wide font-light max-w-xl mt-1"
+                  />
+                </span>
               </label>
-              <label className="flex items-start gap-2">
+              <label className="flex flex-row  items-center gap-2">
                 <input
                   type="checkbox"
                   className="mt-1 accent-gray-500"
                 />
                 <span>
-                  I agree to receive communications by text message from WebTechnality about my inquiry.
+                  <BlurText
+                    text="I agree to receive communications by text message from WebTechnality about my inquiry.
                   You may opt-out by replying STOP or ask for more information by replying HELP.
-                  Message frequency varies. Message and data rates may apply.
+                  Message frequency varies. Message and data rates may apply. "
+                    delay={50}
+                    animateBy="words"
+                    direction="bottom"
+                    className="  text-gray-600 leading-tight tracking-wide font-light max-w-xl mt-6"
+                  />
                 </span>
               </label>
             </div>
@@ -118,14 +147,21 @@ const Contact = () => {
             </motion.div>
 
             {/* Disclaimer */}
-            <p className="text-xs mt-10 text-gray-500">
-              By providing a telephone number and submitting this form you are consenting
+            <span className="  mt-14 text-gray-600">
+              <BlurText
+                text="By providing a telephone number and submitting this form you are consenting
               to be contacted by SMS text message. Message & data rates may apply.
               Message frequency may vary. Reply HELP for more information.
-              You can reply STOP to opt-out of further messaging.
-            </p>
+              You can reply STOP to opt-out of further messaging."
+                delay={50}
+                animateBy="words"
+                direction="bottom"
+                className=" text-[13px]  text-gray-600 leading-tight tracking-wide font-light max-w-xl mt-6"
+              />
+            </span>
           </form>
         </div>
+        <Diagonal2D />
       </section>
       <Footer />
     </>

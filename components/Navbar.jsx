@@ -104,8 +104,8 @@ const Navbar = () => {
               </motion.div>
             )}
           </AnimatePresence>
-          
-            {/* Header inside menu */}
+
+          {/* Header inside menu */}
           <div className="flex justify-between gap-3 items-start py-4 px-2 sm:px-4 mb-8">
             <div className="logo">
               <img src="/logowhiteAsset1.png" alt="Logo" className="w-[250px] lg:w-[300px]" />
@@ -144,40 +144,47 @@ const Navbar = () => {
             <div className="w-full text-right">
               <ul className="navBar  overflow-hidden">
                 <li className="cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-extrabold tracking-tighter">
-                   <Link href="/" className="transition">
-                   Home&nbsp;&nbsp;
+                  <Link href="/" className="transition">
+                    Home&nbsp;&nbsp;
                   </Link>
                 </li>
                 <li className="cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-extrabold tracking-tighter">
-                   <Link href="/about" className="transition">
-                   About&nbsp;&nbsp;
+                  <Link href="/about" className="transition">
+                    About&nbsp;&nbsp;
                   </Link>
                 </li>
 
                 {/* SERVICES with hover mega menu */}
                 <li
                   className="relative group cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-extrabold tracking-tighter"
-                  onMouseEnter={showMegaMenu}
-                  onMouseLeave={hideMegaMenu}
                 >
                   <Link href="/services" className="transition">
                     Services&nbsp;&nbsp;
                   </Link>
                 </li>
+                <li
+                  className="relative group cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-extrabold tracking-tighter"
+                  onMouseEnter={showMegaMenu}
+                  onMouseLeave={hideMegaMenu}
+                >
+                  <Link href="/servicesmegamenu" className="transition">
+                    Services Mega_Menu&nbsp;&nbsp;
+                  </Link>
+                </li>
 
                 <li className="cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-extrabold tracking-tighter">
-                   <Link href="/portfolio" className="transition">
-                   Portfolio&nbsp;&nbsp;
+                  <Link href="/portfolio" className="transition">
+                    Portfolio&nbsp;&nbsp;
                   </Link>
                 </li>
                 <li className="cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-extrabold tracking-tighter">
-                   <Link href="/contact" className="transition">
-                   Contact Us&nbsp;&nbsp;
+                  <Link href="/contact" className="transition">
+                    Contact Us&nbsp;&nbsp;
                   </Link>
                 </li>
                 <li className="cursor-pointer hover:text-[#BDBDBD] text-3xl xl:text-6xl my-1 font-extrabold tracking-tighter">
-                   <Link href="/faqs" className="transition">
-                   FAQs&nbsp;&nbsp;
+                  <Link href="/faq" className="transition">
+                    FAQs&nbsp;&nbsp;
                   </Link>
                 </li>
               </ul>
