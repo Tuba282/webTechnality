@@ -42,6 +42,7 @@ const Faqs = () => {
     <>
       <Navbar />
       <section className=" text-gray-800 px-3 py-12 md:px-16 lg:px-24">
+
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -59,6 +60,7 @@ const Faqs = () => {
             Your Questions, <span className="text-gray-400">Answered</span>
           </h4>
         </motion.div>
+
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-start">
           {/* left Side: Form */}
           <form className="md:w-1/2  lg:p-15 p-10 rounded-3xl space-y-6">
@@ -119,7 +121,7 @@ const Faqs = () => {
           </form>
 
           {/* right Side: Info */}
-          <div className="md:w-1/2 lg:mt-24 border-gray-400 border-s-2 ps-5 space-y-4">
+          <div className="md:w-1/2 lg:mt-24 border-0 border-gray-400 lg:border-s-2 lg:ps-5 space-y-4">
             <div>
               <h3 className="lg:text-6xl text-2xl py-5 lg:ps-5 ">Common <span className="text-gray-400">
                 Questions</span></h3>
@@ -193,6 +195,7 @@ const Faqs = () => {
           <ContactInfo />
         </div>
       </section>
+
       <Footer />
     </>
   );
