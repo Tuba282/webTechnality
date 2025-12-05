@@ -39,6 +39,23 @@ const itemVariants = {
 const ServiceGallery = () => {
     return (
         <div className="flex flex-col justify-center bg-[#252525] items-center min-h-screen  p-20">
+            <div className="max-w-[90%] sm:max-w-[70%] text-center py-10">
+                <div className="flex items-center justify-center gap-5 my-6">
+                    <div className="h-px w-16 bg-[#898989] opacity-40"></div>
+                    <span
+                        className="text-white text-2xl font-[Charm-Regular] italic tracking-wide"
+                        style={{ wordSpacing: "3px" }}
+                    >
+                        show cases
+                    </span>
+                    <div className="h-px w-16 bg-[#898989] opacity-40"></div>
+                </div>
+
+                <h3 className="text-5xl sm:text-6xl lg:text-8xl leading-tight font-light">
+                    <span className="text-white">Our Creative </span>
+                    <span className="text-[#898989]">Work</span>
+                </h3>
+            </div>
             <motion.div
                 variants={containerVariants}
                 initial="hidden"
@@ -77,9 +94,9 @@ const ServiceGallery = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300" />
                         </div>
 
-                        <a className="absolute inset-0 z-10">
+                        <a className="absolute inset-0 z-10 group-hover:opacity-100 opacity-0 transition-opacity duration-300   transform translate-y-0 transition-transform duration-300 group-hover:-translate-y-1    ">
                             <div className="absolute inset-0 flex flex-col justify-start p-6 opacity-100 transition-all duration-300">
-                                <h3 className="text-white text-xl md:text-2xl font-bold mb-2 transform translate-y-0 transition-transform duration-300 group-hover:-translate-y-1">
+                                <h3 className="text-white text-xl md:text-3xl mb-2 font-bold text-shadow-xs text-shadow-white transform translate-y-0 transition-transform duration-300 group-hover:-translate-y-1">
                                     {item.title}
                                 </h3>
                                 <p className="text-gray-200 line-clamp-2 opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
