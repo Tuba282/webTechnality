@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import * as FaIcons from 'react-icons/fa';
 import * as SiIcons from 'react-icons/si';
+import BlurText from '@/components/ui/BlurText';
+import SplitText from '@/components/ui/SplitText';
 
 // Icon color mapping - brand colors for each technology
 const iconColors = {
@@ -11,49 +13,49 @@ const iconColors = {
   FaVuejs: '#4FC08D',
   SiTypescript: '#3178C6',
   FaAngular: '#DD0031',
-  
+
   // Backend
   FaNodeJs: '#339933',
   SiExpress: '#000000',
   SiMongodb: '#47A248',
   SiPostgresql: '#4169E1',
-  
+
   // Styling
   SiTailwindcss: '#06B6D4',
   FaCss3Alt: '#1572B6',
   FaSass: '#CC6699',
   SiStyledcomponents: '#DB7093',
   FaHtml5: '#E34F26',
-  
+
   // Animation & 3D
   SiFramer: '#0055FF',
   SiThreedotjs: '#000000',
   SiGsap: '#88CE02',
-  
+
   // Build Tools
   SiVite: '#646CFF',
   SiWebpack: '#8DD6F9',
   FaNpm: '#CB3837',
   FaGitAlt: '#F05032',
-  
+
   // Design Tools
   SiFigma: '#F24E1E',
   SiAdobexd: '#FF61F6',
   SiSketch: '#F7B500',
   SiCanva: '#00C4CC',
-  
+
   // Mobile
   SiFlutter: '#02569B',
   SiSwift: '#F05138',
   SiKotlin: '#7F52FF',
   FaAndroid: '#3DDC84',
-  
+
   // Cloud & DevOps
   SiFirebase: '#FFCA28',
   SiVercel: '#000000',
   SiNetlify: '#00C7B7',
   FaAws: '#FF9900',
-  
+
   // Default
   FaCode: '#8B5CF6',
 };
@@ -106,13 +108,20 @@ export default function ToolsMarquee() {
       </div>
 
       {/* Title */}
-      <div className="text-center mb-12 relative z-10">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 mb-4">
-          Tools of Trade
-        </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto px-4">
-          Technologies and tools I work with to bring ideas to life
-        </p>
+      <div className="flex flex-col items-center mb-12 relative z-10">
+        <BlurText
+          text="Tools of Trade"
+          className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 mb-4 justify-center"
+          delay={10}
+          animateBy="words"
+        />
+        <SplitText
+          text="Technologies and tools I work with to bring ideas to life"
+          className="text-lg text-gray-600 max-w-2xl px-4"
+          delay={10}
+          tag="p"
+          textAlign="center"
+        />
       </div>
 
       {/* Marquee Container */}

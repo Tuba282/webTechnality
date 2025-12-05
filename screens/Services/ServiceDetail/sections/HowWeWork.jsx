@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import BlurText from "@/components/ui/BlurText";
+import SplitText from "@/components/ui/SplitText";
 
 export default function HowWeWork({ data }) {
     if (!data) return null;
@@ -16,13 +18,19 @@ export default function HowWeWork({ data }) {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-20"
                 >
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 mb-4">
-                        {data.title}
-                    </h2>
+                    <BlurText
+                        text={data.title}
+                        className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 mb-4 justify-center"
+                        delay={10}
+                        animateBy="words"
+                    />
                     {data.subtitle && (
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                            {data.subtitle}
-                        </p>
+                        <SplitText
+                            text={data.subtitle}
+                            className="text-lg text-gray-600 max-w-3xl mx-auto"
+                            delay={10}
+                            tag="p"
+                        />
                     )}
                 </motion.div>
 
@@ -66,7 +74,7 @@ export default function HowWeWork({ data }) {
                                         }}
                                         className="relative z-10 mb-6"
                                     >
-                                        <div className="w-16 h-16 mx-auto bg-[#1D1D1D] rounded-full flex items-center justify-center shadow-lg shadow-gray-900/50 group-hover:shadow-xl group-hover:shadow-gray-900/60 group-hover:scale-110 transition-all duration-300">
+                                        <div className="w-16 h-16 bg-[#1D1D1D] rounded-full flex items-center justify-center shadow-lg shadow-gray-900/50 group-hover:shadow-xl group-hover:shadow-gray-900/60 group-hover:scale-110 transition-all duration-300">
                                             <span className="text-2xl font-bold text-white">
                                                 {step.number}
                                             </span>
@@ -74,14 +82,21 @@ export default function HowWeWork({ data }) {
                                     </motion.div>
 
                                     {/* Title */}
-                                    <h3 className="text-2xl font-semibold text-gray-900 mb-4 text-center group-hover:text-black transition-colors duration-300">
-                                        {step.title}
-                                    </h3>
+                                    <SplitText
+                                        text={step.title}
+                                        className="text-2xl font-semibold text-gray-900 mb-4 group-hover:text-black transition-colors duration-300"
+                                        delay={10}
+                                        tag="h3"
+                                    />
 
                                     {/* Description */}
-                                    <p className="text-gray-600 text-center leading-relaxed">
-                                        {step.description}
-                                    </p>
+                                    <SplitText
+                                        text={step.description}
+                                        className="text-gray-600 leading-relaxed"
+                                        delay={10}
+                                        tag="p"
+                                        textAlign="left"
+                                    />
 
                                     {/* Hover Gradient Background */}
                                     <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />

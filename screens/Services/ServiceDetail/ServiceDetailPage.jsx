@@ -7,14 +7,11 @@ import DigitalExcellence from "./sections/DigitalExcellence";
 import ValueDelivery from "./sections/ValueDelivery";
 import HowWeWork from "./sections/HowWeWork";
 import ToolsOfTrade from "./sections/ToolsOfTrade";
-import PricingSection from "./sections/PricingSection";
-import FAQSection from "./sections/FAQSection";
 import FeatureGrid from '@/components/FeatureGrid';
 import { Faq } from '@/components/Faq';
 import CTASection from "./sections/CTASection";
 import Loader from "@/components/loader";
 import PricingCardDark from "@/components/PricingCardDark";
-import CTASection1 from "./sections/CTASection1";
 
 export default function ServiceDetailPage({ slug }) {
     const [service, setService] = useState(null);

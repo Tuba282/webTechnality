@@ -1,12 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+import BlurText from "@/components/ui/BlurText";
+import SplitText from "@/components/ui/SplitText";
 
 export default function HeroBanner({ data }) {
     if (!data) return null;
 
     return (
-        <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-900">
+        <section className="relative min-h-[70vh] py-5 flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-400 via-black to-gray-500">
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
                 <img
@@ -14,7 +16,7 @@ export default function HeroBanner({ data }) {
                     alt={data.title}
                     className="w-full h-full object-cover opacity-30"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/20 to-black" />
             </div>
 
             {/* Animated Background Elements */}
@@ -56,29 +58,44 @@ export default function HeroBanner({ data }) {
                     className="mb-4"
                 >
                     <span className="inline-block px-4 py-2 bg-white/10 border border-white/30 rounded-full text-gray-200 text-sm font-medium tracking-wider uppercase backdrop-blur-sm">
-                        {data.subtitle}
+                        <SplitText
+                            text={data.subtitle}
+                            className=""
+                            delay={10}
+                            tag="span"
+                        />
                     </span>
                 </motion.div>
 
                 {/* Title */}
-                <motion.h1
+                <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="text-5xl md:text-6xl lg:text-7xl font-light text-white mb-6 leading-tight"
+                    className="mb-6"
                 >
-                    {data.title}
-                </motion.h1>
+                    <BlurText
+                        text={data.title}
+                        className="text-5xl md:text-6xl lg:text-7xl font-light text-white leading-tight justify-center"
+                        delay={10}
+                        animateBy="words"
+                    />
+                </motion.div>
 
                 {/* Description */}
-                <motion.p
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
-                    className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed"
+                    className="mb-10"
                 >
-                    {data.description}
-                </motion.p>
+                    <SplitText
+                        text={data.description}
+                        className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+                        delay={10}
+                        tag="p"
+                    />
+                </motion.div>
 
                 {/* CTA Button */}
                 <motion.div

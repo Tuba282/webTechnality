@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import * as FaIcons from "react-icons/fa";
 import * as SiIcons from "react-icons/si";
+import BlurText from "@/components/ui/BlurText";
+import SplitText from "@/components/ui/SplitText";
 
 // Icon mapper
 const getIcon = (iconName) => {
@@ -24,13 +26,20 @@ export default function ValueDelivery({ data }) {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-4">
-                        {data.title}
-                    </h2>
+                    <BlurText
+                        text={data.title}
+                        className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-4 justify-center"
+                        delay={10}
+                        animateBy="words"
+                    />
                     {data.subtitle && (
-                        <p className="text-lg text-gray-400">
-                            {data.subtitle}
-                        </p>
+                        <SplitText
+                            text={data.subtitle}
+                            className="text-lg text-gray-400"
+                            delay={10}
+                            tag="p"
+                            textAlign="center"
+                        />
                     )}
                 </motion.div>
 
@@ -75,14 +84,20 @@ export default function ValueDelivery({ data }) {
                                         </motion.div>
 
                                         {/* Title */}
-                                        <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-gray-200 transition-colors duration-300">
-                                            {benefit.title}
-                                        </h3>
+                                        <BlurText
+                                            text={benefit.title}
+                                            className="text-2xl md:text-4xl font-light text-white mb-4 group-hover:text-gray-200 transition-colors duration-300 justify-start"
+                                            delay={10}
+                                            animateBy="words"
+                                        />
 
                                         {/* Description */}
-                                        <p className="text-gray-300 leading-relaxed">
-                                            {benefit.description}
-                                        </p>
+                                        <SplitText
+                                            text={benefit.description}
+                                            className="text-gray-300 font-light leading-relaxed"
+                                            delay={10}
+                                            tag="p"
+                                        />
                                     </div>
 
                                     {/* Decorative Elements */}

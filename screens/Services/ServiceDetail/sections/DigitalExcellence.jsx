@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import * as FaIcons from "react-icons/fa";
 import * as SiIcons from "react-icons/si";
+import BlurText from "@/components/ui/BlurText";
+import SplitText from "@/components/ui/SplitText";
 
 // Icon mapper to get the actual icon component
 const getIcon = (iconName) => {
@@ -24,12 +26,19 @@ export default function DigitalExcellence({ data }) {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 mb-6">
-                        {data.title}
-                    </h2>
-                    <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                        {data.description}
-                    </p>
+                    <BlurText
+                        text={data.title}
+                        className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 mb-6 justify-center"
+                        delay={10}
+                        animateBy="words"
+                    />
+                    <SplitText
+                        text={data.description}
+                        className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
+                        delay={10}
+                        tag="p"
+                        textAlign="center"
+                    />
                 </motion.div>
 
                 {/* Features Grid */}
@@ -58,25 +67,33 @@ export default function DigitalExcellence({ data }) {
                                     <div className="absolute inset-0 bg-gradient-to-br from-gray-900/5 to-black/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                                     {/* Content */}
-                                    <div className="relative z-10">
+                                    <div className="relative z-10 flex flex-col items-center text-center">
                                         {/* Icon */}
                                         <motion.div
                                             whileHover={{ scale: 1.2, rotate: 5 }}
                                             transition={{ duration: 0.3 }}
-                                            className="text-5xl mb-4 text-gray-900"
+                                            className="text-5xl mb-4 text-gray-900 inline-flex p-3 rounded-full"
                                         >
                                             <IconComponent className="w-12 h-12" />
                                         </motion.div>
 
                                         {/* Title */}
-                                        <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-black transition-colors duration-300">
-                                            {feature.title}
-                                        </h3>
+                                        <SplitText
+                                            text={feature.title}
+                                            className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-black transition-colors duration-300"
+                                            delay={10}
+                                            tag="h3"
+                                            textAlign="center"
+                                        />
 
                                         {/* Description */}
-                                        <p className="text-gray-600 leading-relaxed">
-                                            {feature.description}
-                                        </p>
+                                        <SplitText
+                                            text={feature.description}
+                                            className="text-gray-600 leading-relaxed"
+                                            delay={10}
+                                            tag="p"
+                                            textAlign="center"
+                                        />
                                     </div>
 
                                     {/* Decorative Corner */}
