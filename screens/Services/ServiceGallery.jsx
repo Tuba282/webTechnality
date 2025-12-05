@@ -38,7 +38,7 @@ const itemVariants = {
 
 const ServiceGallery = () => {
     return (
-        <div className="flex flex-col justify-center items-center min-h-screen  p-20">
+        <div className="flex flex-col justify-center bg-[#252525] items-center min-h-screen  p-20">
             <motion.div
                 variants={containerVariants}
                 initial="hidden"
@@ -52,12 +52,12 @@ const ServiceGallery = () => {
                         key={idx}
                         variants={itemVariants}
                         className={`
-                            relative group flex flex-col justify-between rounded-xl overflow-hidden border border-white/10 bg-neutral-900/50 backdrop-blur-sm
+                            relative group border-[1px] border-gray-300 flex flex-col justify-between rounded-xl overflow-hidden border border-white/10 bg-neutral-900/50 backdrop-blur-sm
                             ${item.type === 'billboard' ? 'lg:col-span-2 lg:row-span-2' : ''}
                             ${item.type === 'logo' ? 'lg:col-span-2' : ''}
                             min-h-[200px]
                         `}
-                    >
+                    > <div className="absolute inset-0 bg-black/70 w-full h-full z-10 group-hover:opacity-100 opacity-0 transition-opacity duration-300" />
                         <div className="relative w-full h-full transition-transform duration-500 group-hover:scale-105">
                             {/* Cover Image (Visible initially) */}
                             <img
@@ -77,12 +77,12 @@ const ServiceGallery = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300" />
                         </div>
 
-                        <a href={item.link} className="absolute inset-0 z-10">
-                            <div className="absolute inset-0 flex flex-col justify-end p-6 opacity-100 transition-all duration-300">
+                        <a className="absolute inset-0 z-10">
+                            <div className="absolute inset-0 flex flex-col justify-start p-6 opacity-100 transition-all duration-300">
                                 <h3 className="text-white text-xl md:text-2xl font-bold mb-2 transform translate-y-0 transition-transform duration-300 group-hover:-translate-y-1">
                                     {item.title}
                                 </h3>
-                                <p className="text-gray-300 text-sm line-clamp-2 opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+                                <p className="text-gray-200 line-clamp-2 opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
                                     {item.desc}
                                 </p>
                             </div>
@@ -90,7 +90,7 @@ const ServiceGallery = () => {
                     </motion.div>
                 ))}
             </motion.div>
-            
+
         </div>
     );
 };
