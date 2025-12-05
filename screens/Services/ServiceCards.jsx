@@ -14,6 +14,7 @@ import {
 const services = [
     {
         id: 1,
+        slug: 'web-development',
         category: "WEB DEVELOPMENT",
         title: "Web Development",
         description: "We build robust, scalable web applications using cutting-edge technologies for optimal performance. We craft digital experiences that are not just functional, but unforgettable.",
@@ -24,6 +25,7 @@ const services = [
     },
     {
         id: 2,
+        slug: 'digital-marketing',
         category: "DIGITAL MARKETING",
         title: "Digital Marketing",
         description: "We deliver data-driven marketing strategies that boost your online presence and maximize ROI. We craft digital experiences that are not just functional, but unforgettable.",
@@ -34,6 +36,7 @@ const services = [
     },
     {
         id: 3,
+        slug: 'mobile-app-development',
         category: "MOBILE DEVELOPMENT",
         title: "Mobile App Development",
         description: "Native and hybrid mobile solutions that work flawlessly across iOS and Android platforms. We craft digital experiences that are not just functional, but unforgettable.",
@@ -44,6 +47,7 @@ const services = [
     },
     {
         id: 4,
+        slug: 'ui-ux-design',
         category: "UI/UX DESIGN",
         title: "UI/UX Design",
         description: "Create stunning, responsive and attractive user interfaces that captivate your audience and drive engagement. We craft digital experiences that are not just functional, but unforgettable.",
@@ -53,6 +57,7 @@ const services = [
         gradient: "from-gray-900 to-black"
     },
 ];
+
 
 export default function ServiceCards() {
     return (
@@ -255,7 +260,7 @@ export default function ServiceCards() {
                                     className="flex flex-wrap gap-3"
                                 >
                                     {service.features.map((feature, idx) => (
-                                        <motion.span
+                                        <motion.a href={`/services/${service.slug}`}
                                             key={idx}
                                             variants={{
                                                 hidden: { opacity: 0, y: 20, scale: 0.8 },
@@ -285,53 +290,10 @@ export default function ServiceCards() {
                                             <span className="relative z-10 group-hover:text-white transition-colors duration-300">
                                                 {feature}
                                             </span>
-                                        </motion.span>
+                                        </motion.a>
                                     ))}
                                 </motion.div>
-                                <br />
 
-                                {/* Start Project Button */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                                    transition={{
-                                        duration: 0.6,
-                                        delay: 0.8,
-                                        type: "spring",
-                                        stiffness: 150
-                                    }}
-                                    viewport={{ once: false }}
-                                >
-                                    <motion.button
-                                        whileHover={{
-                                            x: 10,
-                                            scale: 1.05,
-                                            transition: { duration: 0.3 }
-                                        }}
-                                        whileTap={{ scale: 0.95 }}
-                                        className="group inline-flex items-center gap-3 text-gray-900 font-semibold text-base md:text-lg transition-all duration-300"
-                                    >
-                                        <motion.span
-                                            whileHover={{ scale: 1.1 }}
-                                        >
-                                            Start Project
-                                        </motion.span>
-                                        <motion.div
-                                            animate={{
-                                                x: [0, 8, 0],
-                                                scale: [1, 1.2, 1]
-                                            }}
-                                            transition={{
-                                                duration: 1.5,
-                                                repeat: Infinity,
-                                                ease: "easeInOut"
-                                            }}
-                                            className="relative"
-                                        >
-                                            <FiArrowRight className="w-5 h-5 md:w-6 md:h-6" />
-                                        </motion.div>
-                                    </motion.button>
-                                </motion.div>
                             </div>
                         </motion.article>
                     ))}
