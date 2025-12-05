@@ -216,11 +216,7 @@ const Navbar = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className={`z-[100] transition-all duration-300 ${
-          isScrolled
-            ? "bg-white/95 backdrop-blur-md shadow-lg"
-            : "bg-transparent"
-        }`}
+        className={`z-[100] transition-all duration-300 `}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
@@ -434,7 +430,7 @@ const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 bottom-0 w-full sm:w-96 bg-white z-[160] lg:hidden overflow-y-auto"
+              className="fixed top-0 right-0 bottom-0 w-full sm:w-90 bg-white z-[160] lg:hidden overflow-y-auto"
             >
               <div className="p-6">
                 {/* Header */}
@@ -442,7 +438,7 @@ const Navbar = () => {
                   <img
                     src="/logoBlackAsset2.png"
                     alt="Logo"
-                    className="h-10 w-auto"
+                    className="h-[30px] w-[200px]"
                   />
                   <button
                     onClick={() => setIsMobileMenuOpen(false)}
@@ -465,7 +461,7 @@ const Navbar = () => {
                         <div>
                           <button
                             onClick={() => setShowMobileServices(!showMobileServices)}
-                            className="w-full flex items-center justify-between px-4 py-3 text-lg font-semibold text-gray-800 hover:bg-gray-50 rounded-lg transition-colors"
+                            className="w-full flex items-center justify-between px-2 py-2 text-lg font-semibold text-gray-800 hover:bg-gray-50 rounded-lg transition-colors"
                           >
                             {link.name}
                             <ChevronDown
