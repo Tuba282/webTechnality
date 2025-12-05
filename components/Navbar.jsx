@@ -308,7 +308,7 @@ const Navbar = () => {
                                       className="w-full h-full object-cover"
                                     />
                                   </AnimatePresence>
-                                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-black/60"></div>
+                                  <div className="absolute inset-0"></div>
                                 </div>
 
                                 <div className="space-y-2">
