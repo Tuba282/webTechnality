@@ -40,22 +40,28 @@ const servicesData = {
         description: "Creating Intuitive User Experiences That Drive Engagement."
       },
       {
-        name: "Web Design",
-        href: "/services/web-design",
+        name: "User Research",
+        href: "/services/ui-ux-design",
         icon: FaGlobe,
         description: "Modern And Responsive Website Designs That Convert."
       },
       {
-        name: "Brand Design",
-        href: "/services/brand-design",
+        name: "Wireframing",
+        href: "/services/ui-ux-design",
         icon: FaStar,
         description: "Building Strong Brand Identities That Stand Out."
       },
       {
-        name: "Graphic Design",
-        href: "/services/graphic-design",
+        name: "Prototyping",
+        href: "/services/ui-ux-design",
         icon: FaImage,
         description: "Creative Visual Solutions For All Your Needs."
+      },
+      {
+        name: "Visual Design",
+        href: "/services/ui-ux-design",
+        icon: FaRobot,
+        description: "Visual Solutions For All Your Design Needs."
       },
     ],
     image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&q=80",
@@ -210,7 +216,7 @@ const Navbar = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
+        className={`z-[100] transition-all duration-300 ${
           isScrolled
             ? "bg-white/95 backdrop-blur-md shadow-lg"
             : "bg-transparent"
@@ -229,7 +235,7 @@ const Navbar = () => {
                 <img
                   src="/logoBlackAsset2.png"
                   alt="Logo"
-                  className="w-[250px] lg:w-[300px] h-auto md:h-14 lg:h-16"
+                  className="w-[200px] lg:w-[300px]"
                 />
               </a>
             </motion.div>
@@ -276,7 +282,7 @@ const Navbar = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-1/2 transform -translate-x-1/2 pt-4 w-screen max-w-6xl z-[200]"
+                        className="absolute top-full left-1/2 transform -translate-x-1/2 pt-4 w-screen max-w-4xl z-[200]"
                         onMouseEnter={() => setShowServicesDropdown(true)}
                         onMouseLeave={() => setShowServicesDropdown(false)}
                       >
@@ -383,7 +389,7 @@ const Navbar = () => {
             </div>
 
             {/* CTA Button */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.5 }}
@@ -396,7 +402,7 @@ const Navbar = () => {
                 <span className="relative z-10">Get In Touch</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-black to-gray-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
-            </motion.div>
+            </motion.div> */}
 
             {/* Mobile Menu Button */}
             <button
