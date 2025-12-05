@@ -11,7 +11,7 @@ const Service = () => {
         <>
             <Navbar />
             <ServiceHero />
-            <ServiceGallery/>
+            <ServiceGallery />
             <ServiceCards />
             <Footer />
         </>

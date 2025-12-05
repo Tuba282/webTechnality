@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import BlurText from "@/components/ui/BlurText";
+// import BlurText from "@/components/ui/BlurText";
 import SplitText from "@/components/ui/SplitText";
 
 export default function ServiceHero({ heroImage = "/steel.png" }) {

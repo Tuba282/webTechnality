@@ -9,7 +9,12 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@fontsource/roboto": "^5.2.9",
     "@gsap/react": "^2.1.2",
+    "@mui/icons-material": "^7.3.5",
+    "@mui/material": "^7.3.5",
     "@studio-freight/lenis": "^1.0.42",
     "aos": "^2.3.4",
     "class-variance-authority": "^0.7.1",
